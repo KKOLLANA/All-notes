@@ -1,0 +1,201 @@
+SPRING BOOT::--
+
+1:-What is Spring Boot?
+Ans:-Spring Boot is a project that is built on the top of the Spring Framework.
+	It provides an easier and faster way to set up, configure, and run both simple and web-based applications.
+	It is a Spring module that provides the RAD (Rapid Application Development) feature to the Spring Framework. 
+	It is used to create a stand-alone Spring-based application that you can just run because it needs minimal Spring configuration.
+	In short, Spring Boot is the combination of Spring Framework and Embedded Servers.
+	In Spring Boot, there is no requirement for XML configuration (deployment descriptor).
+	It uses convention over configuration software design paradigm that means it decreases the effort of the developer.
+
+2:-Why we use spring boot?
+Ans:-We should use Spring Boot Framework because:
+	The dependency injection approach is used in Spring Boot.
+	It contains powerful database transaction management capabilities.
+	It simplifies integration with other Java frameworks like Hibernate ORM, Struts, etc.
+	It reduces the cost and development time of the application.
+
+3:-Advantages of Spring Boot?
+Ans:-It creates stand-alone Spring applications that can be started using Java -jar.
+	It tests web applications easily with the help of different Embedded HTTP servers such as Tomcat, Jetty, etc. We don't need to deploy WAR files.
+	It provides opinionated 'starter' POMs to simplify our Maven configuration.
+	It provides production-ready features such as metrics, health checks, and externalized configuration.
+	There is no requirement for XML configuration.
+	It offers a CLI(Command line interface) tool for developing and testing the Spring Boot application.
+	It offers the number of plug-ins.
+	It also minimizes writing multiple boilerplate codes (the code that has to be included in many places with little or no alteration), XML configuration, and annotations.
+	It increases productivity and reduces development time.
+
+4:-Limitations of Spring Boot?
+Ans:-Spring Boot can use dependencies that are not going to be used in the application.
+     These dependencies increase the size of the application.
+
+5:-Goals of Spring Boot?
+Ans:-The main goal of Spring Boot is to reduce development, unit test, and integration test time.
+	Provides Opinionated Development approach
+	Avoids defining more Annotation Configuration
+	Avoids writing lots of import statements
+	Avoids XML Configuration.
+
+5:-Spring Boot Features?
+Ans:-   Web Development
+	SpringApplication
+	Application events and listeners
+	Admin features
+	Externalized Configuration
+	Properties Files
+	YAML Support
+	Type-safe Configuration
+	Logging
+	Security
+
+
+SPRING BOOT ANNOTATIONS
+
+1:-Core Spring Framework Annotations
+
+@Required: It applies to the bean setter method. 
+           It indicates that the annotated bean must be populated at configuration time with the required property,
+           else it throws an exception BeanInitilizationException.
+
+@Autowired: Spring provides annotation-based auto-wiring by providing @Autowired annotation.
+           It is used to autowire spring bean on setter methods, instance variable, and constructor. 
+           When we use @Autowired annotation, the spring container auto-wires the bean by matching data-type.
+
+@Configuration: It is a class-level annotation. The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
+
+@ComponentScan: It is used when we want to scan a package for beans.
+                It is used with the annotation @Configuration. We can also specify the base packages to scan for Spring Components.
+
+@Bean: It is a method-level annotation. It is an alternative of XML <bean> tag. It tells the method to produce a bean to be managed by Spring Container.
+
+
+2:-Spring Framework Stereotype Annotations
+
+@Component: It is a class-level annotation.
+            It is used to mark a Java class as a bean.
+            A Java class annotated with @Component is found during the classpath.
+            The Spring Framework pick it up and configure it in the application context as a Spring Bean.
+
+@Controller: The @Controller is a class-level annotation.
+             It is a specialization of @Component.
+             It marks a class as a web request handler.
+             It is often used to serve web pages. By default, it returns a string that indicates which route to redirect.
+             It is mostly used with @RequestMapping annotation.
+
+@Service: It is also used at class level. It tells the Spring that class contains the business logic.
+
+@Repository: It is a class-level annotation.
+             The repository is a DAOs (Data Access Object) that access the database directly.
+             The repository does all the operations related to the database.
+
+
+3:-Spring Boot Annotations
+
+@EnableAutoConfiguration: It auto-configures the bean that is present in the classpath and configures it to run the methods.
+                          The use of this annotation is reduced in Spring Boot 1.2.0 release because developers provided an alternative of the annotation, i.e. @SpringBootApplication.
+
+@SpringBootApplication: It is a combination of three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration.
+
+
+
+3:-Spring MVC and REST Annotations
+
+@RequestMapping: It is used to map the web requests.
+                 It has many optional elements like consumes, header, method, name, params, path, produces, and value.
+                 We use it with the class as well as the method.
+
+@GetMapping: It maps the HTTP GET requests on the specific handler method.
+             It is used to create a web service endpoint that fetches .
+             It is used instead of using: @RequestMapping(method = RequestMethod.GET)
+
+@PostMapping: It maps the HTTP POST requests on the specific handler method. 
+             It is used to create a web service endpoint that creates .
+             It is used instead of using: @RequestMapping(method = RequestMethod.POST)
+
+@PutMapping: It maps the HTTP PUT requests on the specific handler method. 
+             It is used to create a web service endpoint that creates or updates.
+             It is used instead of using: @RequestMapping(method = RequestMethod.PUT)
+
+@DeleteMapping: It maps the HTTP DELETE requests on the specific handler method.
+             It is used to create a web service endpoint that deletes a resource. 
+             It is used instead of using: @RequestMapping(method = RequestMethod.DELETE)
+
+@PatchMapping: It maps the HTTP PATCH requests on the specific handler method. 
+             It is used instead of using: @RequestMapping(method = RequestMethod.PATCH)
+
+@RequestBody: It is used to bind HTTP request with an object in a method parameter. 
+             Internally it uses HTTP MessageConverters to convert the body of the request.
+             When we annotate a method parameter with @RequestBody, the Spring framework binds the incoming HTTP request body to that parameter.
+
+@ResponseBody: It binds the method return value to the response body. It tells the Spring Boot Framework to serialize a return an object into JSON and XML format.
+
+@PathVariable: It is used to extract the values from the URI.
+             It is most suitable for the RESTful web service, where the URL contains a path variable.
+             We can define multiple @PathVariable in a method.
+
+@RequestParam: It is used to extract the query parameters form the URL.
+             It is also known as a query parameter.
+             It is most suitable for web applications. 
+             It can specify default values if the query parameter is not present in the URL.
+
+@RequestHeader: It is used to get the details about the HTTP request headers.
+             We use this annotation as a method parameter. 
+             The optional elements of the annotation are name, required, value, defaultValue.
+             For each detail in the header, we should specify separate annotations.
+             We can use it multiple time in a method
+
+@RestController: It can be considered as a combination of @Controller and @ResponseBody annotations.
+            The @RestController annotation is itself annotated with the @ResponseBody annotation. 
+            It eliminates the need for annotating each method with @ResponseBody.
+
+@RequestAttribute: It binds a method parameter to request attribute. 
+            It provides convenient access to the request attributes from a controller method. With the help of @RequestAttribute annotation, 
+            we can access objects that are populated on the server-side.
+
+
+OTHER ANNOTATIONS:-
+
+1:-@EnableEurekaClient
+To enble it for the eureka server and connect all the microservices
+
+2:-EnableSwagger2
+To enable swagger implementation for the database
+
+3:-EnableWebSecurity
+The @EnableWebSecurity is a marker annotation. 
+It allows Spring to find (it's a @Configuration and, therefore, @Component ) and automatically apply the class to the global WebSecurity . 
+If I don't annotate any of my class with @EnableWebSecurity still the application prompting for username and password.
+
+4:-CrossOrigin
+This @CrossOrigin annotation enables cross-origin resource sharing only for this specific method. 
+By default, its allows all origins, all headers, and the HTTP methods specified in the @RequestMapping annotation
+
+5:-EnableGlobalSecurity
+EnableWebSecurity will provide configuration via HttpSecurity.
+It allows you to configure your access based on urls patterns, the authentication endpoints, handlers etc...
+
+EnableGlobalMethodSecurity provides AOP security on methods. 
+Some of the annotations that it provides are PreAuthorize, PostAuthorize.For your needs, it's better to mix the two.
+
+
+JUNIT 5 ANNOTATIONS:-
+
+Assert:-
+
+void assertEquals(boolean expected,boolean actual): checks that two primitives/objects are equal. It is overloaded.
+void assertTrue(boolean condition): checks that a condition is true.
+void assertFalse(boolean condition): checks that a condition is false.
+void assertNull(Object obj): checks that object is null.
+void assertNotNull(Object obj): checks that object is not null.
+
+1:-@Test
+@Test annotation specifies that method is the test method.
+
+2:-@Mock
+We can use @Mock to create and inject mocked instances without having to call Mockito.mock manually.
+
+3:-InjectMock
+@InjectMocks is the Mockito Annotation. It allows you to mark a field on which an injection is to be performed.
+

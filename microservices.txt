@@ -1,0 +1,23 @@
+ create mavin project- name user service
+
+Resource-->application.properties-->server.port =9001
+(or)
+in yml file
+Resource-->application.yml-->server:
+                             port:9001
+Create a class in the main folder
+
+List<Contact> contacts=new ArrayList<>(); --->this list is  to used to load the data from the other micro services
+
+after that we declare the interface 
+... in this we will declare only those methods which we require in users and contact
+
+  
+--> (we have to create a packages like )
+
+User
+service
+
+controller
+To create controller we use @RestController it is used for  and 
+@RequestMapping is used for mappting with the server and for using that services

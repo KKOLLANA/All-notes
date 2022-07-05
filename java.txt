@@ -1,0 +1,9370 @@
+Fundamnetal language
+---------------------
+Identifiers
+data types
+literals
+variables
+type casting
+
+2)Operators
+-----------
+
+unary operator
+-->increment/decrement operator
+
+Binary operator
+
+-->arithmetic
+-->relational operator
+-->equality operator
+-->bitwise operator
+-->logical operator
+-->assignment operator
+
+Ternary operator
+----------------
+
+condition operator
+
+3) Flow control
+------------------
+
+if else
+switch
+while
+do while
+for loop
+break
+continue
+return
+
+4)oops concept
+-----------------
+
+methods
+
+method signature
+inheritance
+method overloading
+method overridng
+co variant concept
+modifiers
+final
+abstract
+method hiding
+interface
+static control flow
+instance control flow
+Object type casting
+constructor
+data hiding
+abstraction
+encapsulation
+polymorphism
+
+5) java.lang package
+--------------------------
+
+Object class
+
+methods of Object class
+---------------------------
+toString()
+hashCode()
+equals()
+finalize()
+getClass()
+clone()
+wait()
+wait(long ms)
+wait(long ms,int ns)
+notify()
+notifyAll()
+
+String class
+
+StringBuffer
+
+StringBuilder
+wrapper classes
+autoboxing
+autounboxing
+
+
+6)Exception handling
+---------------------
+
+Introduction
+runtime stack mechanism
+methods for exception information
+customised exception handling 
+try catch
+try with multiple catch block
+finally
+return vs finally
+throw
+throws
+
+7) Arrays
+
+Collections framework
+----------------------
+
+Collection
+List
+->ArrayList
+->LinkedList
+->Vector
+->Stack
+
+Set
+-> hashSet
+->LinkedHashSet
+->SortedSet
+->NavigableSet
+->TreeSet
+
+Map
+HashMap
+LinkedHashMap
+weakHahsMap
+IdentityHashMap
+TreeMap
+
+queue
+
+Generics
+
+Inner classes
+---------------
+normal or regular inner class
+method local inner class
+anonymous inner class
+static nested class
+
+multi threading
+
+file operation
+
+serialization and deserialization
+
+java ---> it is a programming language
+
+
+WHATEVER THE PROGRAM WE WRITE IS KNOWN A SOURCE CODE
+
+our system doesnt understand source so java has provided 2 softowares
+
+1)compiler
+
+2)jvm(java virtual machine)
+
+compiler checks the syntax of the source code and generates bytecode
+
+jvm understands bytecode so it converts bytecode into machine level language
+
+IDE (integrated development environment) 
+-------------------------------------------
+
+it is platform where we write and run a program
+
+notepad
+edit plus
+notepad++
+eclipse
+sublime
+visual studdio
+intelliJ
+netbeans
+.
+.
+.
+.
+
+basic syntax of java program
+--------------------------------
+
+class   ----> house
+
+methods ----->rooms
+
+variables ---> cupboard/almirah
+
+objects   ---> family members
+
+
+class Demo
+{
+
+public static void main(String[] args)
+{
+
+System.out.println(" ailaaa");
+
+}
+
+}
+
+class name should always starts with uppercase..it is not mandatory but it is a standrd which we need to follow
+
+every java program which programmer will run should contain main() method because execution always starts from 
+main method
+
+System.out.println() --> it is used to print anything in java
+
+every statement should end with semicolon...
+
+and we should close every open brackets
+
+
+we have to save our source code at a particular location with some file name
+
+compile ---> javac FileName
+             e.g  javac Demo.java
+
+run -----> java class Name
+           e.g   java Demo
+
+
+class Test
+{
+
+
+
+}
+
+we can compile a program without main method but we cant execute a program
+
+case 1: if no class is declared as public 
+------------------------------------------
+
+class A
+{
+
+}
+
+class B
+{
+
+}
+
+class C
+{
+
+}
+
+A.java
+B.java
+C.java
+zeeshan.java
+
+we can save the program with any fileName
+
+
+case 2: if a class is declared as public
+-------------------------------------------------
+
+class A
+{
+
+}
+
+public class B
+{
+
+}
+
+class C
+{
+
+}
+
+A.java --> not possible
+B.java ---> ppossible
+C.java --> not possible
+zeeshan.java  ---> not possible
+
+if a class is declared as public then we have to save the program with the file name 
+same as the class name which is declared as public
+
+
+case 3: if more than one class is declared as public
+-------------------------------------------------------
+
+public class A
+{
+
+}
+
+
+public class B
+{
+
+]
+
+
+
+class C
+{
+
+}
+
+A.java --->not ppossible
+B.java ---> not possible
+C.java ---> not possible
+zeeshan.java ---> not possible
+
+we cant declare more than one class as public within a program
+
+                                       Identifiers
+				       -------------
+
+name ---> identifier
+
+A name in java program which is used for identification purpose is known as identifier
+
+it can be a class name,method name and variable name
+
+Rules for writing identifiers
+-------------------------------
+
+1)the allowed characters for identifiers are
+
+a-z (lowercase)
+
+A-Z (uppercase)
+
+0-9 (digits)
+
+$  (dollar)
+
+_  (underscore)
+
+
+2) Bond007 ----> possible
+
+   007Bond ----> not possible
+
+   identifiers should never start with digits
+
+3) identifiers are case sensitive
+
+e.g  zeeshan
+     ZEESHAN
+
+    'A' IS NOT SAME AS 'a'
+
+    a-z  ---> 97-122
+    A-Z  ---> 65-90
+
+4) int x=10;  ---> valid
+
+   int if=20;  --->invalid
+
+   here "if" is a reserved keyword
+
+   Reserved keywords cannot be used as an identifier
+
+
+_zee_ ---> valid
+
+$ zeeshan $  ---> valid
+
+123zeeshan 123 ---> invalid
+
+_12345_  ---> valid
+
+
+                               Data types
+			       -----------
+
+data ---> value
+
+int x = 10;
+
+every variable is of some type that type is known as data type
+
+there are 2 types of data types
+--------------------------------
+
+1) primitive --> it stores values
+------------------
+
+1)byte --> 1 byte --->  -128 to 127
+
+2)short ---> 2 byte ----> -32768 to 32767
+
+3)int  ----> 4 byte 
+
+4)long ----> 8 byte
+
+the above data  typpes are used to store integer numbers
+
+5)float  ---> 4 byte ---->10.5f or 10.5F
+
+6)double ---> 8 byte  ---> 10.5
+
+to store decimal numbers
+
+7)boolean  ---> true , false ---> 1 bit
+
+8)char ---> ' a ' --> 2 byte
+
+2)non primitive ---> it is used to store objects
+-----------------
+
+all java classes
+
+e.g ---> String ---> " "--->"abcjdu4375ry24h4"
+
+String ---> it is a sequence of characters
+
+
+
+class Student
+{
+
+String name="zeeshan";
+int age=100;
+double height=5.10;
+String address="jamshedpur";
+boolean married=false;
+}
+
+                         Literals
+			 ---------
+
+10 ---> constant
+
+int x=10;  ---> here 10 is literal
+
+int ---> data type
+
+x  --->variables
+
+10 ---> literals
+
+assigning a constant value to a variable is knwn as literals
+
+Number Literals
+---------------
+there are 2 types of Number literals
+
+1)Integral literals
+2)Floating point literals
+
+Integral literals
+-------------------
+
+1)Decimal form
+--------------
+Base 10 --->range --> 0-9
+
+e.g --> int x=10;
+
+
+2)Octal Form
+------------
+Base 8 ---> range ---> 0-7                
+
+it starts from zero
+
+e.g -->int y=010;
+
+
+Hexadecimal form
+--------------------
+
+Base 16  range ---> 0-9,a-f  or 0-9,A-F
+
+starts from 0x or 0X
+
+int z= 0x10;
+
+public static void main(String[] args) 
+	{
+		int x=10;
+		int y=010;
+		int z=0x10;
+		System.out.println(x);//10
+		System.out.println(y);//8
+		System.out.println(z);//16
+	}
+
+int x= 12345;//valid
+int x = 0453;//valid
+int x=0768; //invalid
+int x=0xface;//valid
+int x=0xbeer;//invalid
+int x=10; //valid
+long l=10l;//valid
+int x=10l; //CE:incompatible types
+long l=10;//valid
+
+every integer number is by default treated as int
+
+byte b=10; //valid
+byte b=128;//invalid
+
+float f=10.5f; //valid
+double d =10.5; //valid
+float f=10.5; // invalid
+double d =10.5f;// valid
+double d =0x123.45; //invalid
+double d =0123.45; //valid
+
+floating point literals are not represented in hexadecimal or octal form
+
+
+boolean b=true;//valid
+boolean b=True;// invalid
+boolean b=0; //invalid
+boolean b=1; //invalid
+
+char ch='a';//valid
+char ch='ab';//invalid
+char ch='8';//valid
+
+ascii value of 0-9 ---> 48 to 57
+
+String s='ancbcg';//invalid
+String s="hddihvibbv27373";//valid
+
+' ' ---> char
+" "----> String
+
+int x=10;
+System.out.println("x");// x
+System.out.println(x); // 10
+
+
+5 ---> digit
+'5' ---> char ---> 53
+
+short s=32767; // valid
+short s=32768; //invalid
+
+How to create an oBJECT
+============================
+
+WE CREATE object of a class
+
+Object is created with the help of "new" keyword...
+
+
+class Test
+{
+public static void main(String[] args)
+{
+Test t=new Test();
+Test t1=new Test();
+Test t2=new Tst();
+.
+.
+.
+
+}
+}
+
+
+we can create any no of objects  of a clas as per our requirement
+
+No two objects can have same object reference..
+
+                        Variables
+			-----------
+
+int x =10;
+
+it is the name of a memory which is used to store the values....
+
+There are 3 types of variables
+
+1)non static or instance variable
+
+2)static variable 
+
+3)local variable
+
+Non static variable
+-----------------------------
+
+class Student
+{
+String name;
+public static void main(Stringp[] args)
+{
+Student s1=new Student();
+s1.name="sallu";
+.}
+}
+
+int x=10;
+
+
+if the value of variable varies from object to object  such type of variable is known as 
+non static variable...
+
+it is declared inside a class but outside method,block or constructor...
+
+class Test
+{
+int x=10;
+public static void main(String[] args)
+{
+System.out.println(x);
+}
+}
+
+CE:non static variable x cannot be referenced from static context
+
+inside static area we cant access non static variable directly...
+
+class Test
+{
+int x=10;
+public static void main(String[] args)
+{
+Test t=new Test();
+System.out.println(t.x); //10
+}
+}
+
+we can access non static variable inside static area with the help of object reference
+
+it is not mandatory to initialize non static variable,if we are not initializing then JVM 
+wILL provide default values...
+
+class Test 
+{
+	int x;
+	double d;
+	float f;
+	boolean b;
+	char ch;
+	String s;
+public static void main(String[] args)
+{
+Test t=new Test();
+System.out.println(t.x);//0
+System.out.println(t.d);//0.0
+System.out.println(t.f);//0.0
+System.out.println(t.ch);
+System.out.println(t.b);//false
+System.out.println(t.s);//null
+}
+}
+
+default values for all non primitive data type is null...
+
+non static variable is stored in heap area...
+
+non static variable memory is allocated at the time of object creation....
+
+for every object there is a seperate copy of non static variables
+
+                     STATIC VARIABLE
+		     ----------------
+
+IF THE VALUE OF VARIABLE DOESNT VARY FROM OBJECT TO oBJECT SUCH TYPE OF VARIABLE IS KNOWN AS 
+STATIC VARIABLE...
+
+it is declared inside the class but outside the method,block or constructor with static keyword
+
+class Test
+{
+static int x=10;
+public static void main(String[] args)
+{
+System.out.println(x); //10  --> directly
+
+Test t=new Test();
+System.out.println(t.x);//10  ---> by object reference --> not recommended
+
+System.out.println(Test.x);//10 ---> by class Name -->Recommended way
+
+}
+
+}
+
+we can access static variable directly within a class
+
+we can also access static variable with the help of object reference but it is not recommended
+
+the only recommended way to access static variable is with the help of class name
+
+it is not mandatory to initialize static variable and JVM will provide the same default values
+
+it is stored in method area or class area
+
+static variable memory is allocated at the time of class loading
+
+             class loading
+sourcecode ----------------> bytecode
+
+there is only one copy of static variable which will be shared by each and every object
+
+class Test 
+{
+	int x=10;
+	static int y=20;
+	public static void main(String[] args) 
+	{
+		Test t1=new Test();
+		t1.x=100;
+		t1.y=200;
+		Test t2=new Test();
+		t2.x=50;
+		System.out.println(t1.x);//10
+		System.out.println(t2.y);//200
+	}
+}
+
+
+we cant have static and non static variable name as same...
+
+class Test 
+{
+	int x=10;
+	static int x=20;
+	public static void main(String[] args) 
+	{
+		
+	}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:4: error: variable x is already defined in class Test
+        static int x=20;
+                   ^
+1 error
+
+             non static variable                                 static variable
+	     ---------------------                                --------------------
+
+its value varies from object to object                    its values doesnt vary from object to
+                                                          object
+
+declared inside a class outside method               decalred inside a class outside method with
+                                                     static keyword
+
+accessed with the help of object ref.              accessed with the help of class name
+
+stored in heap memory                              stored in method area
+
+for every object there is a seperate copy          there is only one copy
+
+memory allocate at the time of object creation       allocated at class loading
+
+                          Local variable
+			  ----------------
+
+it is temporary variable...
+
+it is declared inside a method,block or constructor.
+
+class Test
+{
+public static void main(String[] args)
+{
+int x;
+System.out.println("hello");
+}
+}
+
+o/p--->hello
+
+class Test
+{
+public static void main(String[] args)
+{
+int x;
+System.out.println(x);
+}
+}
+
+CE:variable x might not have been initiaized
+
+it  is mandatory to initialize local variable before using that variable...
+
+the scope of local  variable is within a method(in which it has been declared),if we try to
+access outside that method we will  get ce saying cannot find symbol
+
+class Test
+{
+public static void main(String[] args)
+{
+int x=10;
+m1();
+}
+
+public static void m1()
+{
+System.out.println(x);
+}
+
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:11: error: cannot find symbol
+System.out.println(x);
+                   ^
+  symbol:   variable x
+  location: class Test
+1 error
+
+local variables memory will be allocated when method execution starts and it will be destroyed 
+once method execution completes....
+
+it is stored in stack memory...
+
+the only applicable modifier for local variable is final...
+
+public static void main(String[] args)
+{
+public int x=10;//invalid
+protected int x=10;//invalid
+private int x=10;//invalid
+static int x =10;//invalid
+synchronized int x=10;//invalid
+final int x=10;//valid
+
+}
+
+class Test
+{
+	int x=10;
+	static int y=20;
+	public static void main(String[] args)
+{
+int z=30;
+
+System.out.println(z);//30 ---> directly
+
+System.out.println(Test.y);//20 --> by class Name
+
+Test t=new Test();
+System.out.println(t.x);//10 ---> by object reference
+
+}
+
+}
+
+                          Operators
+			  ------------
+
+a + b ---> expression
+
+a,b --> operands --> on them operations are performed
+
++   --> operator --> it is used to perform operation
+
+on the basis of operands java operators are divided into 3 parts
+
+1) unary operator ---> one operand
+
+2) binary operator ---> 2 operands
+
+3)ternary operator ---> 3 operands
+
+                                  Unary OPERATOR(++ , --)
+				  ---------------------------
+
+it is divided into 2 parts
+
+a)increment operator --> it will increase the value of variable by 1..
+-------------------------
+1)pre increment (++x)
+2)post increment (x++)
+
+b)decrement operator ---> it will decrease the value of variable by 1.
+----------------------
+1)pre decrement (--x)
+2)post decrement(x--)
+
+
+int x=++y -->first increment the value of y and then assign the incremented value of y to x
+
+int x=y++ -->first assign the value of y to x and then increment the value of y
+
+
+int x=10;
+x++;
+System.out.println(x);//11
+
+
+int x=10;
+++x;
+System.out.println(x);//11
+
+
+int x=10;
+int y=++x;
+System.out.println(x);
+System.out.println(y);
+
+
+int x=10;
+int y=x++;
+System.out.println(x);
+System.out.println(y);
+
+
+int x=1;
+int y= x++ + x++;
+System.out.println(y);
+
+int x=1;
+int y= ++x + ++x;
+System.out.println(y);
+
+
+
+int x=10;
+++10;
+System.out.println(x); 
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:7: error: unexpected type
+++10;
+  ^
+  required: variable
+  found:    value
+1 error
+
+unary operator is applicable for variables but not for constants
+
+int x=10;
+int y=++(++x); ---> int y=++11
+System.out.println(y); CE
+
+
+byte b=10;
+b++;
+System.out.println(b);//11                 97 ---> 98
+
+
+int x=10;
+x++;
+System.out.println(x);//11
+
+char ch='a';
+ch++;
+System.out.println(ch);//b
+
+double d =10.5;
+d++;
+System.out.println(d);//11.5
+
+boolean b=false;
+b++;
+System.out.println(b);//CE
+
+unary operator is applicable for every primitive data type except boolean
+
+byte b=127;
+b++;
+System.out.println(b);//-128
+
+
+int x=2147483647;
+x++;
+System.out.println(x); //-2147483648
+
+
+char ch='z';
+ch++;
+System.out.println(ch); // {
+
+byte b=10;
+b++;
+System.out.println(b);// 11
+
+
+byte b=10;
+b=b+1;
+System.out.println(b);//CE: incompatible types
+
+        
+b++ is not same as b=b+1;
+
+b = (byte)(b+1);
+
+b++ is same as b=(byte)(b+1);
+
+----------------------------------------------------------------------------------
+ 
+                            Arithmetic operators(+,-,*,/,%)
+			    ------------------------------
+
+int x=10;
+int y=2;
+
+System.out.println(x+y); // 12
+System.out.println(x-y); //8
+System.out.println(x*y); //20
+System.out.println(x/y); //5
+System.out.println(x%y); //0
+
+
+/ --> division gives u quotient
+
+% --> modulus gives remainder
+
+if we are using any arithmetic operators between 2 variable x and y then the resultant
+type is always max(int,type of x,type of y)
+
+byte b=10;
+b=b+1;
+
+max(int,byte,int)
+
+
+byte---> short
+
+               --> int  --> long --> float  --> double
+
+	 char
+
+byte + byte = int
+byte + short = int
+short + short=int
+int + long= long
+long+float=float
+float + double =double
+
+                   String concatenation
+		   -------------------------
+
+"10" + 20 = "1020";
+
+if we are using + operator between 2 operands where one of the operands is of String type the
+as aresult both operands will stick or merge with each other...this is known as 
+String concatenation
+
+the result will also be of String type
+
+10 + 20 = 30; --> addition
+
+"10" + 20 = "1020";  --> concatenation
+
++ operator is the only overloaded operator in java because in some case it acts as an addition
+operator and in other case it acts as a concatenation operator
+
+String a="zee";
+		int b=10;
+		int c=20;
+		int d=30;
+System.out.println(a+b+c+d);//zee102030 or zee60
+System.out.println(b+a+c+d);//10zee2030
+System.out.println(b+c+a+d);//30zee30
+System.out.println(b+c+d+a);//60zee
+
+                  Relational operator(>,<,>=,<=)
+		  ---------------------------------
+
+it is used to compare values but not the type
+
+System.out.println(10>20); //false
+
+System.out.println('a' < 98); //true
+
+System.out.println('a'>97.0); //false
+
+System.out.println(true>false); CE
+
+it is applicable for every primitive data type except boolean
+
+System.out.println("srk123">"srk"); // Ce
+
+it is not applicable for non primitive data types
+
+System.out.println(10<20<30); //ce
+
+Nesting of relational operator is not applicable
+
+                    Equality operator(==)
+		    ------------------------
+
+System.out.println(10==20);//false
+
+System.out.println('a'==97.0); //true
+ 
+System.out.println(false==false); //true
+
+it is applicable for every primitive data type including boolean also...
+
+it is applicable for non primitive data types
+
+Test t1=new Test();
+
+t1 --> object reference
+
+for 2 object reference r1,r2
+
+r1==r2 returns true if both references are pointing towards same object
+
+r1==r2 returns false when both are pointing towards different object
+
+class Test
+{
+public static void main(String[] args)
+{
+Test t1=new Test();
+Test t2=new Test();
+Test t3=t1;
+System.out.println(t1==t2); //false
+System.out.println(t2==t3);//false
+System.out.println(t3==t1);//true
+System.out.println(t1==10);//ce
+System.out.println(t1==null); //false
+}
+}
+
+
+class Test 
+{
+	public static void main(String[] args) 
+	{
+
+		Test t=new Test();
+		String s=new String();
+		Object o=new Object();
+		System.out.println(t==o);false
+		System.out.println(s==o);false
+		System.out.println(t==s);CE:incomaparable types
+       
+		
+		
+		
+	}
+}
+
+if we are using equality operator for non primitive data types then there must be some
+relation(either parent to child or child to parent or of same type) between the arguments
+otherwise we will get compile time error saying incomparable types
+
+for primitive data types equality operator is used to compare the values
+
+for non primitive data types it is used to compare the reference
+
+
+                            Bitwise operator(& ,|,^)
+			  --------------------------
+
+&  --> AND ---> a & b ---> it returns true if both arguments are true 
+
+|  ---> OR ---> a | b ---> it returns true if any one of the arguments is true
+
+^  ---> X-OR ---> a ^ b --> it return true if both arguments are different
+
+
+                System.out.println(true & false);//false
+		System.out.println(true | false);//true
+		System.out.println(true ^ false);//true
+                System.out.println(true ^ true); //false
+		System.out.println(false ^ false);//false
+
+
+
+                 System.out.println(4 & 5);//4
+		System.out.println(4 | 5);//5
+		System.out.println(4 ^ 5);//1
+
+
+
+
+
+    8      4        2        1
+
+
+    0      1        0         0     ----> 4
+
+    0      1        0         1   ------> 5
+
+-------------------------------------------------------
+
+     0     1        0         1    ------
+
+
+Bitwise complement(~ tilde, !(boolean complement))
+----------------------------
+
+System.out.println(~true);CE
+
+System.out.println(~4);
+
+it is applicable only for integer numbers but not boolean
+
+System.out.println(!true);//false
+
+System.out.println(!4);//CE
+
+                     Short circuit operator/logical operator (&& , ||)
+		     ---------------------------------------------------
+
+a & b                        a && b   ---> functionality is same
+
+
+a | b                         a || b   ---> functionality is same
+
+
+a &&  b  ---> b will be executed iff a is true
+
+a || b ----> b will be executed iff a is false
+
+                     Bitwise                                    Logical
+		     ---------                                 ------------
+
+both arguments must be executed                     execution of second argument is optional
+
+it is applicable for boolean and integer                   it is applicable for only boolean
+
+
+int x=10;
+int y=15;
+if(++x < 10    &    ++y>15)
+{
+x++;
+}
+
+else
+{
+y++;
+}
+
+System.out.println(x);//11
+System.out.println(y);//17
+
+
+        x        y
+&       11      17
+
+&&      11      16
+
+|       12      16
+
+||      12      16
+
+
+Assignment operator(=)
+-------------------------
+
+there are 3 types of assignment operator
+
+1) simple assignment
+
+e.g ---> int x=10;
+
+2)chained assignment
+
+int a,b,c,d;
+a=b=c=d=10;
+
+3)compound assignment
+
+int x=10;
+x+=1; ---> x=x+1;
+System.out.println(x);//11
+
+int a;
+a=b=c=d=10; //CE
+
+
+int b,c,d;
+int a=b=c=d=10;
+
+
+int a=b=c=d=10 // CE
+
+int a,b,c,d;
+a=b=c=d=20;
+a+=b-=c*=d/=2;
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);//200
+System.out.println(d);//10
+
+a+=b-=c*=d/=2;
+a+=b-=c*=10;
+
+a+=b-=200;
+
+a+=-180
+a=a-180
+a=160
+
+d/=2;  ---> d=d/2 --->10
+
+c*=10 ---> c=c*10; --->200
+
+b-=200---> b=b-200--->-180
+
+
+     Ternary operator(?:)
+     ---------------------
+
+int x=(10>20)?30:40;
+System.out.println(x);//40
+
+
+int x=(10>20)?((30>40)?50:60):70;
+Systemout.println(x); //60
+
+             Type Casting
+	     -----------------
+
+converting from one type to another type is known as Type casting
+
+there are 2 types of Type casting in java
+
+1)Implicit type casting
+2)Explicit type Casting
+
+Implicit Type Casting
+-----------------------------
+int x ='a';
+System.out.println(x); //97
+
+double d =10;
+System.out.println(d); //  10.0
+
+Compiler is responsible to perform implicit type casting
+
+whenever we are assigning a smaller data value to a bigger data type variable,implicit
+type casting will be performed...
+
+it is known as upcasting or widening
+
+there is no loss of information
+
+
+Explicit type casting
+----------------------
+
+int x=10;
+byte b=x;
+System.out.println(b); //CE:incompatible types
+
+
+byte b=(byte)x;
+
+Programmer is responsible for explicit type casting
+
+whenever we are assigning a bigger data value to a smaller data type variable
+explicit type casting will be performed
+
+it is known as downcasting or narrowing
+
+there may be some loss of information
+
+
+
+                      Flow control
+		       --------------
+
+the order in which all the stateents will be executed at runtime is called flow control
+
+Selection statement
+-----------------------
+
+if else
+switch
+
+Iterative statement
+-----------------------
+while loop
+do-while loop
+for loop
+
+1) if-else
+-------------
+
+if(condition)
+{
+statement 1;
+}
+else
+{
+statement 2;
+}
+
+
+if condition is true ---> statement 1
+if condition is false ---> statement 2
+
+the argument to if else should be of boolean type,if we try to give any other type then we will
+get compile time error saying incompatible types:
+
+if(true)
+{
+System.out.println("aillaa");
+}
+else
+{
+System.out.println("uimaaa");
+}
+
+o/p---> true
+
+if(false)
+{
+System.out.println("aillaa");
+}
+else
+{
+System.out.println("uimaaa");
+}
+
+o/p ---> uimaaa
+
+int x=10;
+if(x)
+{
+System.out.println("aillaa");
+}
+else
+{
+System.out.println("uimaaa");
+}
+
+CE:incompatible types
+
+int x=10;
+if(x=20)
+{
+System.out.println("aillaa");
+}
+else
+{
+System.out.println("uimaaa");
+}
+CE:incompatible types
+
+int x=10;
+if(x==20)
+{
+System.out.println("aillaa");
+}
+else
+{
+System.out.println("uimaaa");
+}
+
+o/p ---> uimaaa
+
+
+
+
+if(true)
+{
+System.out.println("hii");
+}
+
+o/p --> hii
+
+else part is optional
+
+if(false)
+{
+System.out.println("hii");
+}
+
+no output
+-------------------------------------------------------------
+
+if(true) //invalid                       if(true); //valid
+
+
+
+if(true)
+{
+
+}
+
+curly braces are optional
+-------------------------------------------------------------------
+
+if(true)
+System.out.println("hii");
+
+o/p ---> hii
+
+if(true)
+int x=10;
+
+
+C:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:8: error: variable declaration not allowed here
+int x=10;
+    ^
+1 error
+
+if we are not providing any curly braces then only one statement is allowed and that 
+statement should not be of declarative type
+
+int x;
+if(true)
+x=10;
+
+if(true)
+{
+int x=10;
+}
+//valid
+
+------------------------------------------------------------------------
+
+
+public static void main(String[] args)
+{
+int age=28;
+if(age > 18)
+System.out.println("eligible to vote");
+else
+System.out.println("not eligible to vote");
+}
+}
+
+
+Netsed if-else
+----------------
+if(false)
+{
+if(false)
+System.out.println("achaa");
+else
+System.out.println("ohhho");
+}
+else
+{
+System.out.println("thk hai");
+}
+
+
+
+
+
+
+
+
+if(true)
+if(true)
+System.out.println("achaa");
+else
+System.out.println("ohhho");
+else
+System.out.println("thk hai");
+
+
+public static void main(String[] args)
+{
+if(true)
+System.out.println("achaa");
+System.out.println("ohhho");
+else
+System.out.println("thk hai");
+}
+}
+
+Test.java:10: error: 'else' without 'if'
+else
+^
+1 error
+--------------------------------------------------------------------------------------------
+
+switch
+-------
+
+Syntax
+------------
+
+switch(x)
+{
+case 0:
+Statement 0;
+break;
+
+case 1:
+statement 1;
+break;
+.
+.
+.
+default:
+default statement;
+break;
+
+}
+
+allowed arguments for swutch are
+---------------------------------
+
+1.4v
+------
+
+byte
+short
+int
+char
+
+1.5v
+------
+Byte
+Short
+Integer
+Character
+enum
+
+1.7v
+------
+String
+
+
+switch(x)
+{
+case 1:
+System.out.println(1);
+break;
+
+case 2:
+System.out.println(2);
+break;
+
+case 3:
+System.out.println(3);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+
+x=1              x=2              x=3               x=4
+----           ---------       --------------------------
+1                 2                3                  def
+
+
+int x=10;
+switch(x)
+{
+
+
+
+}
+
+valid
+
+an empty switch statement is a valid java syntax .i.e both case and default are optional
+
+int x=10;
+switch(x)
+{
+
+System.out.println("hiii");
+
+}
+
+an independent statement inside switch is not allowed
+
+
+int x=10;
+int y=20;
+switch(x)
+{
+case 10:
+System.out.println(10);
+break;
+
+case y:
+System.out.println(20);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+
+
+int x=10;
+final int y=20;
+switch(x)
+{
+case 10:
+System.out.println(10);
+break;
+
+case y:
+System.out.println(20);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+
+10
+
+int x=10;
+int y=20;
+switch(x)
+{
+case 10:
+System.out.println(10);
+break;
+
+case 'y':
+System.out.println(20);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+error
+
+byte b=10;
+switch(b)
+{
+case 10:
+System.out.println(10);
+break;
+
+case 100:
+System.out.println(100);
+break;
+
+case 1000:
+System.out.println(1000);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+
+error
+
+case label should be in the range of switch argument
+
+
+byte b=10;
+switch(b+1)
+{
+case 10:
+System.out.println(10);
+break;
+
+case 100:
+System.out.println(100);
+break;
+
+case 1000:
+System.out.println(1000);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+
+o/p ---> def
+
+int x=97;
+int y=98;
+switch(x)
+{
+case 97:
+System.ot.println(97);
+break;
+
+case 98:
+System.out.println(98);
+break;
+
+case 'b':
+System.out.println(99);
+break;
+
+default:
+System.out.println("def");
+break;
+}
+}
+
+Test.java:17: error: duplicate case label
+case 'b':
+^
+1 error
+
+
+duplicate case label is not allowed
+
+case label
+---------------
+
+it should be of constant expression
+
+it should be in the range of switch argument
+
+duplicate case label is not allowed
+
+default:
+-----------
+
+it is optional
+
+we can write default case at most once
+
+it is not mandatory to write default as the last case
+
+
+                        Fall through inside switch
+			-----------------------------------
+
+switch(x)
+{
+case 0:
+System.out.println(0);
+
+case 1:
+System.out.println(1);
+break;
+
+case 2:
+System.out.println(2);
+
+default:
+System.out.println("def");
+}
+}
+
+x=0         x=1         x=2          x=3
+---       -------      ------     ------------
+0,1         1            2,def        def
+
+Iterative statement
+-----------------------
+
+1) for loop
+----------------
+
+when we known the exact no of iteration then we should go  for for-loop
+
+Syntax
+---------
+        1             2,5,8       4,7,10
+for(initialization ; condition ; inc/dec)
+{
+3,6,9
+statement;
+
+}
+
+
+for(int i=0;i<3;i++)
+{
+System.out.println("sleeping");
+}
+
+i=0 1  2 3
+sleeping
+sleepimg
+sleeping
+
+Initialization part
+-----------------------
+
+for(int i=0; i< 10; i++)
+{
+
+}
+
+1)int i=0,j=0,k=0; //valid
+
+2)int i=0,int j=0,int k=0;//invalid
+
+3)int i=0; int j=0; int k=0; // invalid
+
+for(int i=0; int j=0; int k=0; i< 10; i++)
+{
+
+}
+
+
+4)int i=0, String s="zeeshan"; // invalid
+
+in initialization part we can declare any no variable but it should be of same type
+
+this part will be executed only once
+
+int i=0;
+for(System.out.println("hii"); i<5;i++)
+	{
+	System.out.println("bye");
+	}
+
+C:\Users\zahid\Desktop\1230>java Test
+hii
+bye
+bye
+bye
+bye
+bye
+
+we can write any statement inside initialization part
+
+Condition part
+----------------
+
+for(int i=0;   ; i++)
+{
+System.out.println("hiii");
+}
+
+o/p --> hii
+hii
+hii
+.
+.
+.
+
+condition part is optional
+
+if we dont write anything in the condition part then compiler will always place true
+
+ increment/decrement part
+ ----------------------------
+
+ for(  ;  ;  )
+ {
+ System.out.println("hii");
+ }
+
+all 3 parts of for loop are optional and independent of each other
+
+for(int i=0;i<10;System.out.println("bye"))
+{
+System.out.println("hii");
+i++;
+}
+
+---------------------------------------------------------------------------------
+
+while loop
+-------------
+
+when we dont know the no of iteration we should go for while loop
+
+while(condition)
+{
+Statement;
+}
+
+the argument to the while loop must be boolean type...if we try to give any other type we will
+get CE saying incompatible types
+
+while(true)
+{
+System.out.println("hii");
+}
+
+hii
+hii
+hii
+.
+.
+.
+
+while(true) // invalid                              while(true);//valid
+
+curly braces are optional
+
+
+while(true)
+System.out.println("hii"); //valid
+
+while(true)
+int x=10;  //
+
+curly braces are optional and if we are not providing any curly braces only one statement is
+allowed and that statement should not be of declarative type
+
+1)while(true)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:9: error: unreachable statement
+System.out.println("bye");
+^
+1 err
+
+
+2)while(false)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+}
+
+unreachable statement
+
+3)                int x=10;
+		int y=20;
+		while(x<y)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+}
+
+hii
+hii
+.
+.
+.
+
+compiler feels that variable vlue cam be changed at runtime so it does throw any compile time 
+error
+
+                int x=10;
+		int y=20;
+		while(x>y)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+}
+
+bye
+
+
+final int x=10;
+		final int y=20;
+		while(x<y)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+}
+
+unreachable statement
+
+
+                int x=10;
+		final int y=20;
+		while(x<y)
+{
+System.out.println("hiii");
+}
+System.out.println("bye");
+
+hii
+hii
+hii
+hii
+.
+.
+.
+
+int x=10;
+
+                        after compilation
+System.out.println(x);----------------------------->System.out.println(x);
+
+
+
+final int x=10;
+
+
+                        after compilation
+System.out.println(x);----------------------------->System.out.println(10);
+
+
+if a variable is declared as final then after the compilation final variable is replaced
+with its value
+
+do while loop
+--------------------
+
+if we want our statement to be executed atleast once then we should go for do while loop
+
+while(false)
+{
+System.out.println("hii");
+}
+
+Syntax
+-------------
+do
+{
+statement;
+}
+while(condition);
+
+true
+-------
+
+statement
+statement
+statement
+.
+.
+.
+
+false
+-------------
+statement
+
+do                                               do;
+while(true);                                     while(true); //valid
+
+
+
+do
+System.out.println("hii");
+while(true);//valid
+
+do
+int x=10;
+while(true); //invalid
+
+curly braces are optional and if we are not providing any curly braces only one
+statement is allowed and that statement should nt be of declarative type
+
+do
+{
+System.out.println("hii");
+}
+while(true);
+System.out.println("bye"); //unreachable statement
+
+
+do
+{
+System.out.println("hii");
+}
+while(false);
+System.out.println("bye");
+
+hii
+bye
+
+int x=10;
+int y=20;
+do
+{
+System.out.println("hii");
+}
+while(x<y);
+System.out.println("bye");
+
+hii
+hii
+hii
+.
+.
+.
+
+int x=10;
+int y=20;
+do
+{
+System.out.println("hii");
+}
+while(x>y);
+System.out.println("bye");
+
+hii
+bye
+
+final int x=10;
+final int y=20;
+do
+{
+System.out.println("hii");
+}
+while(x<y);
+System.out.println("bye");//unreachable
+
+----------------------------------------------------------------------------------------
+
+                         Methods
+			 --------
+
+it is used to write the buisness or application logic
+
+syntax
+-------
+
+public static void m1(int i)
+{
+
+}
+
+modifiers returnType methodName(argument) //declaration
+{
+
+// body or implementation;
+
+}
+
+every method has 2 parts
+
+1)declaration
+2)implementation
+
+
+every method name should always starts with lowercase
+e.g. main()
+     append()
+     concat()
+     length()
+     wait()
+     equals()
+
+if method name contains more than one word then it will start from lowercase but every 
+inner word will start with Upper case
+
+e.g  hashCode()
+     toString()
+     toLowerCase()
+     toUpperCase()
+
+there are 2 types of methods
+
+1)static method 
+2)non static
+
+if method contains static modifier in it then it is static method
+e.g  public static void m1()
+{
+
+}
+
+
+if method does not contain static modifier then it is non static method
+e.g.  public void m2()
+{
+
+}
+
+
+we can declare any no of metthods inside a class as per our requirement
+
+                                 Method calling
+				 ---------------
+
+class Test
+{
+
+public static void main(String[] args)
+{
+System.out.println("main starts");
+System.out.println("main ends");
+m1();
+}
+
+public static void m1()
+{
+System.out.println("m1 starts");
+System.out.println("m1 ends");
+
+}
+}
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+main starts
+main ends
+m1 starts
+m1 ends
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+m1();
+System.out.println("main ends");
+
+}
+
+public static void m1()
+{
+System.out.println("m1 starts");
+System.out.println("m1 ends");
+
+}
+}
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+main starts
+m1 starts
+m1 ends
+main ends
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+m1();
+System.out.println("main ends");
+m1();
+
+}
+
+public static void m1()
+{
+System.out.println("m1 starts");
+System.out.println("m1 ends");
+
+}
+}
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+main starts
+m1 starts
+m1 ends
+main ends
+m1 starts
+m1 ends
+
+execution always starts from main() and it is also completed in main() only
+
+we can call a static method inside static area directly...
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+Test t=new Test();
+t.m1();
+System.out.println("main ends");
+
+
+}
+
+public void m1()
+{
+System.out.println("m1 starts");
+System.out.println("m1 ends");
+
+}
+}
+
+Output/-
+main starts
+m1 starts
+m1 ends
+main ends
+
+we can call non static method inside static area with the help of object reference
+
+class Test 
+{
+	public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1();
+
+}
+
+public void m1(int i)
+{
+System.out.println(i);
+System.out.println("int arg");
+
+}
+
+public  void m2(double d)
+	{
+	System.out.println(d);
+	System.out.println("double arg");
+}
+
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:7: error: method m1 in class Test cannot be applied to given types;
+t.m1();
+ ^
+  required: int
+  found:    no arguments
+  reason: actual and formal argument lists differ in length
+1 error
+
+
+class Test 
+{
+	public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1(10);
+t.m2(10.5);
+t.m3(true);
+t.m4("srk");
+}
+
+public void m1(int i)
+{
+System.out.println(i);
+System.out.println("int arg");
+
+}
+
+public  void m2(double d)
+	{
+	System.out.println(d);
+	System.out.println("double arg");
+}
+
+public  void m3(boolean b)
+	{
+	System.out.println(b);
+	System.out.println("boolean arg");
+}
+
+public  void m4(String s)
+	{
+	System.out.println(s);
+	System.out.println("String arg");
+}
+
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+10
+int arg
+10.5
+double arg
+true
+boolean arg
+srk
+String arg
+
+we can take any data type as an argument
+
+
+there are 3 types of return type
+
+1)void
+2)primitive
+3)non primitive
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+Test t=new Test();
+t.m1();
+
+System.out.println("main ends");
+}
+
+public int m1()
+{
+System.out.println("m1 starts");
+
+}
+
+
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:16: error: missing return statement
+}
+^
+1 error
+
+if method contains any return type except void then we must write a return statement
+inside that method otherwise we will get ce
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+Test t=new Test();
+int x=t.m1();
+System.out.println(x);
+System.out.println("main ends");
+}
+
+public int m1()
+{
+System.out.println("m1 starts");
+return 10;
+}
+
+
+}
+
+
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+main starts
+m1 starts
+10
+main ends
+
+
+class Test 
+{
+	public static void main(String[] args)
+{
+System.out.println("main starts");
+Test t=new Test();
+int x=t.m1();
+System.out.println(x);
+System.out.println("main ends");
+
+}
+
+public int m1()
+{
+System.out.println("m1 starts");
+return 10;
+System.out.println("m1 ends");
+}
+
+
+}
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:17: error: unreachable statement
+System.out.println("m1 ends");
+^
+1 error
+
+
+we cant write any statement after return statement otherwise we will get compile time error
+
+                      Method signature
+		      -----------------
+
+public static void m1(int i)  ---> m1(int) --> method signature
+{
+
+}
+
+Method signature consists of method name and type of argument
+
+class Test
+{
+public void m1(int x) --->m1(int)
+{
+
+}
+
+public void m1(int y) --->m1(int)
+{
+
+}
+}
+
+Test.java:8: error: method m1(int) is already defined in class Test
+public void m1(int y)
+            ^
+1 error
+
+2 methods with same signature within a class is not allowed
+
+
+                              Inheritance(Is - a -relation)
+			      ------------------------------
+
+acquiring properties from one class to another class is known as inheritance
+
+2 classes are involved in inheritance
+
+the class whose properties are acquired is known as Parent,base or super class
+
+the class which acquires the property is known as child,derived or sub class
+
+inheritance is denoted by "extends" keyword
+
+class Test                ----> 1 method ---> m1()
+{
+
+public void m1()
+{
+System.out.println("hii");
+}
+
+}
+
+class Demo extends Test    ----> 2 methods ---> m1() & m2()
+{
+
+public void m2()
+{
+System.out.println("bye");
+}
+
+}
+
+
+class A
+{
+public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1(); //hii
+t.m2(); //CE:cannot find symbol
+
+Demo d =new Demo();
+d.m2(); // bye
+d.m1(); //hii
+
+
+Test t1=new Demo();//Upcasting
+t1.m1();//hii
+t1.m2();//error
+Parent class reference can be used to hold its child class object
+
+Demo d =new Test(); // impossible
+
+}
+}
+
+without inheritance
+-----------------
+App1
+-----
+
+m1(){}
+m2(){}
+
+
+App2
+-------
+m1(){}
+m2(){}
+m3(){}
+m4(){}
+
+App3
+-----
+m1(){}
+m2(){}
+m3(){}
+m4(){}
+m5(){}
+m6(){}
+
+
+with inheritance
+----------------------
+
+App1
+-----
+
+m1(){}
+m2(){}
+
+App2 extends App1
+------------------
+m3(){}
+m4(){}
+
+App3 extends App2
+--------------------
+m5(){}
+m6(){}
+
+the main advantage of inheritance is reusability of code
+
+                    Multiple inheritance
+		    ---------------------
+
+if a class extends more than one class is known as multiple inheritance
+
+class A extends B,C,D
+{
+
+}
+
+it is not allowed in java because of diamond problem...
+
+class A                                             class B
+{                                                   {
+public void m1()                                    public void m1()
+{                                                  {
+System.out.println("A");                          System.out.println("B");
+}                                                  }
+}                                                  }
+
+
+
+class C extends A,B
+{
+public static void main(String[] args)
+{
+C c=new C();
+c.m1();
+}
+}
+
+Object class is the supermost class in java means every class in java is a child class
+of Object class either directly or indirectly
+
+
+if a class doesnt extend any other class then it is the direct child class of Object class
+
+class A
+{
+
+}
+
+if a class extends any other class then that class is said to be indirect child class of
+Object class
+
+class B extends A
+{
+
+}
+
+class A extends A
+{
+
+}
+
+-------------------------------------------
+
+class A extends B
+{
+
+}
+
+class B extends A
+{
+
+
+}
+
+the above inheritance is known as cyclic inheritance and it is not allowed in java
+
+Types of Inheritance
+---------------------------
+
+1)Single Inheritance
+---------------------
+
+when a class extends another class is known as single inheritance
+
+class Animal
+{
+void eat()
+{
+System.out.println("eating");
+}
+}
+
+class Dog extends Animal
+{
+void bark()
+{
+System.out.println("barking");
+}
+
+public static void main(String[] args)
+{
+Dog d =new Dog();
+d.eat();//eating
+d.bark();//barking
+}
+}
+
+
+2)Multi level inheritance
+----------------------------
+
+when there is a chain of inheritance ,it is known as multi level inheritance
+
+class A
+{
+
+}
+
+class B extends A
+{
+
+}
+
+class C extends B
+{
+
+}
+
+3)Hierarchical Inheritance
+--------------------------
+
+when 2 or more classes extends a single class
+
+
+class A
+{
+
+}
+
+
+class B extends A                             class C extends A
+{                                             {
+
+
+}                                              }
+
+Method overloading
+------------------------
+
+m1 ()
+m1 (int i)
+m1 (double d)
+
+creating multiple methods with same name but different arguments within a class is
+known as method overloading
+
+case 1:
+-------------
+
+class Test
+{
+public void m1(float f)
+{
+System.out.println("madhubala");
+}
+
+public void m1(double d )
+{
+System.out.println("saira banu");
+}
+
+public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1(10.5f); //madhubala
+t.m1(10.5);  // saira banu
+t.m1('a'); //madhubala
+}
+}
+
+case 2:
+------------
+
+class Test 
+{
+	public void m1(String s)
+{
+System.out.println("madhubalA");
+}
+
+public void m1(Object o )
+{
+System.out.println("saira banu");
+}
+
+public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1("dilip sahab"); //madhubala
+t.m1(new Object()); //saira banu
+t.m1(null); // madhubala
+
+
+}
+
+}
+when there is a relation between the arguments priority is always given to child class
+
+
+case 3:
+-------
+
+class Test 
+{
+	public void m1(String s)
+{
+System.out.println("madhubalA");
+}
+
+public void m1(Test t )
+{
+System.out.println("saira banu");
+}
+
+public static void main(String[] args)
+{
+
+Test t=new Test();
+t.m1("dilip sahab"); //madhubala
+t.m1(new Test()); //saira banu
+t.m1(null); //CE: reference to m1 is ambiguous
+
+
+}
+
+}
+
+case 4:
+---------
+
+class Test
+{
+
+public void m1(int i,double d)  ---> m1(int,double)
+{
+System.out.println("hii");
+}
+
+public void m1(double d ,int i) ---> m1(double,int)
+{
+System.out.println("bye");
+}
+
+public static void main(String[] args)
+{
+Test t=new Test();
+t.m1(10,10.5); // hii
+
+t.m1(10.5,10); //bye
+
+t.m1(10,10); //CE
+
+}
+}
+
+            var arg method(variable no of arguments)
+	    -------------------------------------------
+
+sum(10,20) --> public static void sum(int x,int y)
+               {
+	       System.out.println(x+y);
+	       }
+
+sum(10,20,30)      public static void sum(int x,int y,int z)
+                     {
+		     System.out.println(x+y+z);
+		     }
+
+sum(10,20,30,40,50)             public static void sum(int a,int b,int c, int d ,int e)
+                                 {
+				 System.out.println(a+b+c+d+e);
+				 }
+
+
+sum(1,2,3,45,6,7,89,....1000nos)    -----> sum(int... x)
+
+According to var arg method we can pass any no arguments 
+
+
+m1(int...x)
+
+m1(10);
+m1(10,20,30,40);
+m1(1,2,3,4,5,6,7,8,9,0,12,34,56,78,90);
+m1();  //valid
+
+we can call var arg method by passing any no of arguments including zero
+
+class Test 
+{
+	public void m1(int...x)  
+{
+		
+System.out.println("hiii");
+
+}
+
+public static void main(String[] args)
+{
+Test t=new Test();
+t.m1(10);
+t.m1(1,2,3,4,5,6,7,8,9,0);
+t.m1('a');
+
+}
+}
+
+Internally var arg method is treated as an array
+
+
+int[] x =new int[1000];
+
+
+Declaration of var arg method
+------------------------------------
+
+m1(int... x) 
+
+m1(int   ...x)
+
+m1(int...x)
+
+m1(int    x...) //invalid
+
+m1(int.   ..x) //invalid
+
+m1(int    .x..) // invalid
+
+m1(int x, int...y) ---> m1(10,20)
+
+we can mix normal parameter with var arg parameter
+
+m1(String s,double...d)
+
+m1(double...d,String s) //invalid
+
+we can mix normal parameter with var arg parameter but  var arg parameter mmust be the last parameter
+
+m1(int...x,double...d) // invalid
+
+wherever there is one dimensional array we can replace with var arg but vice versa is not true
+
+public static void main(String[] args){}
+
+
+public static void main(String... args) //valid
+
+
+case 5:
+-----------
+
+class Test 
+{
+	public void m1(int...x)  
+	{
+		System.out.println("hiii");
+}
+
+
+public void m1(int y)  
+{
+		
+System.out.println("bye");
+
+}
+public static void main(String... args)
+{
+Test t=new Test();
+t.m1(10,20,30,40);//hii
+t.m1(); // hii
+t.m1(10); //bye
+
+}
+}
+
+var arg method will get the least priority
+
+Method overriding
+------------------
+
+changing the implementation of Parent class method in child class according to the
+child class requirement
+
+overriding concept is possible because of inheritance
+
+class Parent
+{
+public void marry()
+{
+System.out.println("madhubala");
+}
+}
+
+class Child extends Parent
+{
+public void marry()
+{
+System.out.println("kajol");
+}
+}
+
+class Test
+{
+public static void main(String[] args)
+{
+Parent p=new Parent();
+p.marry(); //Madhubala
+
+Child c =new Child();
+c.marry(); // kajol
+
+Parent p1=new Child();
+p1.marry(); // kajol
+
+}
+}
+
+In method overriding,method resolvation takes place on the basis of Runtime object or 
+instance type
+
+Method overriding is also known as Runtime polymorphism
+
+
+Rules for overriding
+---------------------------
+
+method signature should be same
+
+Until 1.4v return type should be same but from 1.5v onwards co variant concept came into
+picture
+
+                              Co variant
+			      ----------------
+
+According to this concept we can change the returnn type of method overriding
+
+
+class Test 
+{
+
+public void m1()
+	{
+
+	}
+}
+
+class Demo extends Test
+{
+	public int m1()
+	{
+return 10;
+	}
+}
+
+C:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:12: error: m1() in Demo cannot override m1() in Test
+        public int m1()
+                   ^
+  return type int is not compatible with void
+1 error
+
+class Test 
+{
+
+public double m1()
+	{
+return 10.5;
+	}
+}
+
+class Demo extends Test
+{
+	public int m1()
+	{
+return 10;
+	}
+}
+
+:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:12: error: m1() in Demo cannot override m1() in Test
+        public int m1()
+                   ^
+  return type int is not compatible with double
+1 error
+
+
+Co variant concept is not applicable for primitive data types but it is applicable for
+non primitive data types but with some restriction
+
+class Test 
+{
+
+public String m1()
+	{
+return null;
+	}
+}
+
+class Demo extends Test
+{
+	public Object m1()
+	{
+return null;
+	}
+}
+
+
+C:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:12: error: m1() in Demo cannot override m1() in Test
+        public Object m1()
+                      ^
+  return type Object is not compatible with String
+1 error
+
+
+child class method return type should be the child class of Parent class method
+return type
+
+
+class Test 
+{
+
+public Object m1()
+	{
+return null;
+	}
+}
+
+class Demo extends Test
+{
+	public String m1()
+	{
+return null;
+	}
+}
+
+
+
+class Test 
+{
+
+public Test m1()
+	{
+return null;
+	}
+}
+
+class Demo extends Test
+{
+	public Demo m1()
+	{
+return null;
+	}
+}
+
+
+
+  questions on method overloading
+  -----------------------------------
+
+ 
+class A
+{
+
+     
+}
+ 
+class B extends A
+{
+     
+}
+ 
+class C extends B
+{
+     
+}
+ 
+public class MainClass 
+{
+    static void overloadedMethod(A a)
+    {
+        System.out.println("ONE");
+    }
+     
+    static void overloadedMethod(B b)
+    {
+        System.out.println("TWO");
+    }
+     
+    static void overloadedMethod(Object obj)
+    {
+        System.out.println("THREE");
+    }
+     
+    public static void main(String[] args)
+    {
+        C c = new C();
+         
+        overloadedMethod(c);
+    }
+}
+
+
+
+class X
+{
+    void calculate(int a, int b)
+    {
+        System.out.println("Class X");
+    }
+}
+ 
+class Y extends X
+{
+    @Override
+    void calculate(int a, int b)
+    {
+        System.out.println("Class Y");
+    }
+}
+ 
+class Z extends Y
+{
+    @Override
+    void calculate(int a, int b) 
+    {
+        System.out.println("Class Z");
+    }
+}
+ 
+public class MainClass 
+{   
+    public static void main(String[] args)
+    {
+        X x = new Y();
+         
+        x.calculate(10, 20);
+}
+}
+
+
+
+Modifiers
+--------------------
+
+there are 2 types of modifiers
+
+1)Access modifier
+2)Non Access modifier
+
+Access modifier
+------------------
+
+public
+protected
+default
+private
+
+Non access modifir
+---------------------------
+static 
+final
+abstract
+strictfp
+native
+synchronized
+transient
+volatile
+
+
+Acces modifier
+---------------------
+
+public modifier
+--------------------
+
+it is a modifier applicable for class,methods and variable
+
+if a method is declared as public then we can access it from anywhere
+
+Anywhere means within a same class,outside the class,within the same package and outside the
+package
+
+package Bhubaneswar;
+
+public class A
+{
+public void m1()
+{
+System.out.println("cyclones favourite");
+}
+}
+
+Package Bangalore;
+import Bhubaneswar.A;
+
+class B 
+{
+public static void main(String[] args)
+{
+A a =new A();
+a.m1();
+}
+}
+
+protected
+-------------
+
+if a method is declared as protected then we can access it from anywhere within a package
+but only in child class outside the package
+
+package Bhubaneswar;
+
+public class A
+{
+public void m1()
+{
+System.out.println("cyclones favourite");
+}
+}
+
+Package Bangalore;
+import Bhubaneswar.A;
+
+class B extends A
+{
+public static void main(String[] args)
+{
+A a =new A();
+a.m1(); //CE
+
+B b=new B();
+b.m1();
+}
+}
+
+default
+----------
+
+if a method is declared as default then we can access it from anywhere within the same package
+but not outside the package
+
+private
+-----------
+if a method is declared as private then we cant access it outside the class
+
+Scope of Aceess modifier
+--------------------------------
+
+public > protected > default > private
+
+
+class A
+{
+public void m1()
+{
+
+}
+}
+
+class B extends A
+{
+
+protected void m1()
+{
+
+}
+}
+
+C:\Users\zahid\Desktop\830>javac Test.java
+Test.java:13: error: m1() in Demo cannot override m1() in Test
+protected void m1()
+               ^
+  attempting to assign weaker access privileges; was public
+1 error
+
+class Test 
+{
+
+protected void m1()
+{
+
+}
+}
+
+class Demo extends Test
+{
+
+ public void m1()
+{
+
+}
+}
+
+while coming from parent to child class the scope od access modifier should increase
+but it should not decrease
+
+Parent class modifier     public              protected           default             
+
+
+
+child class modifier      public         public/protected   public/protected/default
+
+
+private modifier cant be overriden because it is restricted one class class only
+
+Non Access modifier
+---------------------
+
+final
+-----------
+
+it is a modifier applicable for variables,methods and classes
+
+final variable
+-------------------
+
+if a variable is declared as final we cant change the value of that variable
+
+class Test
+{
+static final int x=10;
+public static void main(String[] args)
+{
+x=20;
+System.out.println(x);
+}
+}
+
+
+C:\Users\zahid\Desktop\830>javac Test.java
+Test.java:7: error: cannot assign a value to final variable x
+x=20;
+^
+1 error
+
+
+final method
+-----------------
+
+if a method is declared as final then we cant override that method because implementation is
+fixed...
+
+class Parent
+{
+public final void marry()
+{
+System.out.println("madhubala");
+}
+}
+
+class Child extends Parent
+{
+public void marry()
+{
+System.out.println("kajol");
+}
+}
+
+
+class Test 
+{
+
+public final void m1()
+	{
+	}
+}
+
+class Demo extends Test
+{
+	public void m1()
+	{
+
+	}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:11: error: m1() in Demo cannot override m1() in Test
+        public void m1()
+                    ^
+  overridden method is final
+1 error
+
+final class
+--------------
+
+if a class is declared as final then we cant create a child class of that class i.e inheritance 
+is not allowed
+
+
+final class Test 
+{
+
+
+}
+
+class Demo extends Test
+{
+	
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:7: error: cannot inherit from final Test
+class Demo extends Test
+                   ^
+1 error
+
+
+all the methods present inside final class is also by default final but variables need not
+be final...
+
+
+abstract modifier
+-------------------
+
+it is a modifier which is applicable for methods and classes but not for variables
+
+abstract method
+-----------------
+
+1)it is a method which is declared but not implemented
+
+public void m1() // declaration
+{
+//implementation
+}
+
+concrete method
+
+abstract void m1(); --> abstract method
+
+abstract void m2() //invalid
+{
+
+}
+
+2) if a method is declared as abstract then we have to declare the class as an abstract
+
+abstract class Test
+{
+abstract void m1();
+}
+
+3)child class is responsible to provide implementation 
+
+
+abstract class Test   ---> m1() and m2()
+{
+abstract void m1();
+abstract void m2();
+
+}
+
+abstract class Demo extends Test
+{
+public void m1()
+	{
+
+	}
+public void m2()
+{
+
+}
+
+}
+
+
+
+if child class is not providing implementation for all the methods present in parent class
+then we must declare child class as an abstract otherwise we will get CE
+
+class Test
+{
+abstract void m1();
+abstrat void m2();
+}
+
+
+class Demo extends Test
+{
+public void m1()
+{
+
+}
+
+}
+CE
+
+abstract class
+---------------
+
+abstract class is a class whose object cannot be created
+
+abstract class Test
+{
+public static void main(String[] args)
+{
+Test t=new Test();
+}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:5: error: Test is abstract; cannot be instantiated
+        Test t =new Test();
+                ^
+1 error
+
+ abstract class Test 
+{
+
+public void m1()
+	{
+
+	}
+
+	
+}
+
+abstract class can contain both concrete as well as abstrcact method
+
+abstract class can contain zero no of abstract method
+
+if a method is declared as abstract then we have to declare class as an abstract but vice
+versa is not true
+
+-----------------------------------------------------------------------------------------------
+
+
+abstract class Test
+{
+
+abstract void m1();
+
+public void m2()
+{
+System.out.println("hii");
+}
+
+}
+
+
+class Demo extends Test
+{
+
+public void m1()
+{
+System.out.println("Bye");
+}
+
+public static void main(Stringp[] args)
+{
+Demo d =new Demo();
+d.m1(); // Bye
+d.m2(); //hii
+}
+
+}
+
+
+
+
+
+
+
+abstract class Car
+{
+abstract void start();
+}
+
+class Ferrari extends Car
+{
+public void start()
+{
+Syste.out.println("ferrari starts");
+}
+}
+
+class Lambhorghini extends Car
+{
+public void start()
+{
+System.out.println("lamborghini starts");
+}
+}
+
+
+       final                                               abstract
+       -------                                           --------------
+
+it is a modifier applicable for variables        it is a modifier not applicable for variables
+
+final method cant be overriden                   abstract method must be overriden
+
+we cant create the child class of final          we  have to create he child class of abtract
+class                                            class
+
+we can create the object                          we cant create object of abstract class
+
+
+public abstract final void m1()//invalid
+
+abstract and final is an illegal combination for a method
+
+static modifier
+-----------------
+
+class Test
+{
+public void m1()
+{
+
+}
+}
+
+class Demo extends Test
+{
+public static void m1()
+{
+
+}
+}
+
+it is not overriding
+
+
+class Test
+{
+public static  void m1()
+{
+
+}
+}
+
+class Demo extends Test
+{
+public  void m1()
+{
+
+}
+}
+
+we cant override a non static method as static or vice versa because non static is a 
+object level method and static is a class level method hence we cant compare
+it is not overriding
+
+class Test
+{
+public static  void m1()
+{
+
+}
+}
+
+class Demo extends Test
+{
+public static void m1()
+{
+
+}
+}
+
+it is not overrding it is method hiding
+
+
+                               Method hiding
+			       -----------------
+
+class Test 
+{
+
+public static void m1()
+	{
+	System.out.println("hiii");
+	}
+
+}
+
+class Demo extends Test
+{
+
+	public static void m1()
+	{
+		System.out.println("bye");
+	}
+
+	public static void main(String[] args)
+	{
+		 Test t=new Test();
+		 t.m1(); // hii
+
+		 Demo d =new Demo();
+		 d.m1(); // bye
+
+		 Test t1=new Demo();
+		 t1.m1(); // hii
+}
+
+}
+
+        Method hiding                                     Method Overriding
+	--------------                                  ----------------------
+
+Both methods are static                                 Both methods are non static
+
+Compiler is responsible for method                      JVM is responsible for method resolvation
+resolvation
+
+method resolvation takes place on the                   method resolvation takes place on the
+basis of reference type                                 basis of runtime object
+
+it is also known as static or compile                   it is also known as dynamic or runtime
+time polymorphism or early binding                      polymorphism or late binding
+
+
+Polymorphism
+----------------
+
+Same name with different forms is the concept of Polymorphism
+
+e.g 
+
+abs(int i)
+abs(double d)
+abs(String s)
+
+
+Object o=new String();
+Object =new Integer(10);
+Object o=new StringBuffer();
+
+Beautiful definition of Polymorphism
+---------------------------------------
+
+ a boy starts love with the word frienship,but girl ends love with friendship...
+ word is same but attitude is different
+
+
+                             Interface
+			     ----------
+
+
+it is a media between device and the user
+
+one class extends another class
+
+class A extends B
+{
+
+}
+
+
+one class implements interface
+
+class A implemments I
+{
+
+}
+
+one class cannot extends more than one class
+
+class A extends B,C,D
+{
+
+//impossible
+
+}
+
+one class can implement any no interfaces
+
+class A implements I1,I2,I3
+{
+
+}
+
+one interface extends another interface
+
+interface A implements I
+{
+
+}
+
+                                 Interface variables
+				 ---------------------
+
+all the variables present inside interface is by default public,static and final
+
+
+interface A
+{
+
+int x=10;
+
+}
+
+x --> public,static and final
+
+
+public   ---> we can acces it from anywhere
+
+final    ---> we cant change the value of that variable
+
+static   ---> since the interface variable is publlic it cant be local variable because with 
+              local variable public modifier is not applicable
+
+	      since we dont create the object of interface so it cant be non static variable bevcause non static variable
+	      memory is allocated at the time of object creation
+
+
+case 1:
+-----------------
+
+interface A
+{
+
+int x;
+
+}
+
+
+C:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:3: error: = expected
+        int x;
+             ^
+1 error
+
+final variable must be initialized...
+
+case 2:
+----------
+
+interface A
+{
+int x=10;
+}
+
+class B implemets A
+{
+public static void main(String[] args)
+{
+int x=20;
+System.out.println(x); //20
+}
+}
+
+
+interface A
+{
+int x=10;
+}
+
+class B implements A
+{
+public static void main(String[] args)
+{
+ x=20;
+System.out.println(x); 
+}
+}
+
+
+C:\Users\zahid\Desktop\1230>javac Test.java
+Test.java:10: error: cannot assign a value to final variable x
+ x=20;
+ ^
+1 error
+
+
+case 3:
+----------
+
+interface A                                   interface B
+{                                               {
+int x=10;                                      int x=20;
+}                                              }
+
+
+class C implements A,B
+{
+public static void main(String[] args)
+{
+System.out.println(x); CE
+
+System.out.println(A.x); ///10
+
+System.ut.println(B.x); //20
+
+}
+}
+
+we can access interface variable with the help of interface name
+
+                            interface methods
+			    ---------------------
+
+all the methods present inside interface is by default public and abstract whether we declare 
+it or not...
+
+interface A
+{
+void m1();
+public void m1();
+abstract void m1();
+public abstract void m1();
+}
+
+all above are correct
+
+
+
+case 1:
+---------
+if 2 interface having same method with  same signature  and same return type then 
+in implementation class we need to provide implementation only once
+
+
+interface A                                                 interface B
+{                                                           {
+void m1();                                                  void m1();
+}                                                            }
+
+class C implements A,B
+{
+
+public void m1()
+{
+
+}
+
+
+
+}
+
+case 2:
+-------------
+if 2 interface having methods with same return type but diff signature then in implementation
+class we need to provide implementation for both methods seperatel and those methods
+will act as an overloaded method
+
+interface A                                                 interface B
+{                                                           {
+void m1();                                                  void m1(int i);
+}                                                            }
+
+
+class Test implements A,B
+{
+public void m1()
+{
+
+}
+
+public void m1(int i)
+{
+
+}
+
+}
+
+case 3:
+-----------
+if 2 interface with same method with same signature but different return type then it
+is impossible to provide implementation for those methods
+
+
+interface A                                                 interface B
+{                                                           {
+void m1();                                                  int m1();
+}                                                            }
+
+
+
+class C implements A,B
+{
+public void m1()
+{
+
+}
+
+public int m1()     ---> CE
+{
+return 10;
+}
+
+}
+---------------------------------------------
+
+
+abstract class C implements A,B
+{
+public void m1()
+{
+
+}
+}
+
+
+class D extends C
+{
+public int m1()
+{
+return 10;
+}
+
+}
+
+C:\Users\zahid\Desktop\1230>javac zeeshan.java
+zeeshan.java:3: error: m1() in Test cannot implement m1() in B
+        public void m1()
+                    ^
+  return type void is not compatible with int
+zeeshan.java:12: error: m1() in D cannot implement m1() in A
+        public int m1()
+                   ^
+  return type int is not compatible with void
+2 errors
+
+
+interface is 100% abstract class
+
+
+interface  Car
+{
+abstract void convertible();
+}
+
+
+interface Aeroplane
+{
+abstract void engine();
+}
+
+class Vehicle implement Car,Aeroplane
+{
+
+}
+
+Multiple inheritance concept is applicable for interfaces but not for classes
+
+
+                      Marker Interface
+		      --------------------
+
+marker interface is an interface which doesnt contain any method but when implemented by any other
+class then that class object will get some ability...this is known as marker interface or 
+tag interface
+
+
+
+interface A
+{
+
+}
+
+its not a marker interface
+
+e.g
+---------
+
+Serializable
+Cloneable
+RandomAccess
+Single Thread Model
+
+
+import java.io.*;
+class Test implements Cloneable
+	{
+		int x =10;
+		public static void main(String[] args) throws Exception
+		{
+			Test t1=new Test();
+			System.out.println(t1.x);//10
+			Test t=(Test)t1.clone();
+			t1.x=100;
+			System.out.println(t1.x);//100
+			System.out.println(t.x); //10
+	
+		}
+}
+
+-----------------------------------------------------------------------------------
+
+                                     static control flow
+				     ------------------------
+
+class Test
+{
+
+static
+{
+System.out.println("static block");
+}
+
+public static void main(String[] args)
+{
+System.out.println("main");
+}
+}
+
+static block
+main
+
+static block is a block which will be executed automatically before the execution of main method
+
+class Test
+{
+	static
+{
+System.out.println("forst static block");
+}
+
+public static void main(String[] args)
+{
+System.out.println("main");
+}
+
+static
+{
+System.out.println("second static block");
+}
+}
+
+
+C:\Users\zahid\Desktop\1230>java Test
+forst static block
+second static block
+main
+
+
+if a class contains more than one static block then execution always starts from top
+to bottom
+
+public class Demo {
+
+	static int i=10;
+	static
+	{
+		m1();
+		System.out.println("first static block");
+	}
+	public static void main(String[] args) {
+ m1();
+ System.out.println("main");
+}
+	public static void m1()
+	{
+		System.out.println(j);
+	}
+	static
+	{
+		System.out.println("second static block");
+	}
+	static int j=20;
+}
+
+0
+first static block
+second static block
+20
+main
+
+Steps to solve static control flow
+----------------------------------------
+
+1.Identification of static members from top to bottom
+
+2. execution of static variable assignment and blocks from top to bottom
+
+3.execution of main method
+
+can we print any statement to the console without using main method???
+
+yes we can print any statement without main method;;
+
+
+class Test
+{
+static
+{
+System.out.println("hii");
+System.exit();             ---> here JVM shuts down
+}
+}
+
+can we print any statement to the console without using main method and static block
+
+yes it is possible
+-----------------------------
+
+class Test
+{
+static int x=m1();
+
+public static int m1()
+{
+System.out.println("hii");
+System.exit();
+return 10;
+}
+}
+
+Note: we cant print any statement without main method after 1.4v
+
+                           Instance control flow
+			   ---------------------
+
+Instance block / non static block
+------------------------------------
+
+class Test
+{
+
+{
+System.out.println("instance block");
+}
+
+public static void main(String[] args)
+{
+System.out.println("main method")
+}
+
+}
+main method
+
+
+class Test
+{
+
+{
+System.out.println("instance block");
+}
+
+public static void main(String[] args)
+{
+Test t=new Test();
+System.out.println("main method")
+}
+
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+instance block
+main method
+
+
+Instance block is a block which will be executed automatically whenever we create an object
+
+
+class Test
+{
+	
+Test()
+	{
+	System.out.println("constructor");
+	}
+public static void main(String[] args)
+{
+	Test t=new Test();
+System.out.println("main method");
+}
+}
+
+constructor
+main method
+
+Constructor is exxecuted whenever we create an object
+
+class Test
+{
+	
+Test()
+	{
+	System.out.println("constructor");
+	}
+public static void main(String[] args)
+{
+	Test t=new Test();
+System.out.println("main method");
+}
+
+	{
+		System.out.println("instance block");
+	}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+instance block
+constructor
+main method
+
+if both constructor and instance block is present inside a class the first instance block will
+be executed...
+
+1.identificqation of instance members from top to bottom
+
+2.execution of instance variable assignment and blocks from top to bottom
+
+3.execution of constructor
+-------------------------------------------------------------------------------------
+
+class Test
+{
+int i=10;
+{
+m1();
+System.out.println("first instance block");
+}
+Test()
+{
+System.out.println("constructor");
+}
+public static void main(String[] args)
+{
+Test t=new Test();
+System.out.println("main");
+}
+public void m1()
+{
+System.out.println(j);
+}
+{
+System.out.println("second instance block");
+}
+int j=20;
+}
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+0
+first instance block
+second instance block
+constructor
+main
+
+
+class Test
+{
+static
+{
+System.out.println("first static block");
+}
+{
+System.out.println("instance block");
+}
+Test()
+{
+System.out.println("constructor");
+}
+public static void main(String[] args)
+{
+Test t1=new Test();
+System.out.println("main");
+Test t2=new Test();
+}
+static
+{
+System.out.println("second static block");
+}
+{
+System.out.println("second instance block");
+}
+}
+
+C:\Users\zahid\Desktop\IJCE15>java Test
+first static block
+second static block
+instance block
+second instance block
+constructor
+main
+instance block
+second instance block
+constructor
+
+
+
+
+
+
+
+
+                             Constructor
+			     ------------
+
+class Test
+{
+Test()
+{
+System.out.println("constructor");
+}
+
+public static void main(String[]  args)
+{
+Test t=new Test();
+}
+
+}
+
+whenever we create an object some piece of code will be executed automatically to perform 
+initialization of an object
+
+Constructor is a special type of method which will be executed everytime when an object is created
+to perform initialization of an object
+
+Rules for writing a constructor
+----------------------------------
+
+constructor name is same as class name
+
+return type concept is not applicable for constructor even void also
+
+
+class Test
+{
+void Test()
+{
+
+}
+
+}
+
+valid.. it is a method not constructor
+
+3.all access modifier is applicable for constructor
+
+
+class Student
+{
+String name;
+public static void main(Stringp[] args)
+{
+Student s1=new Student();
+Student s2=new Student();
+Systeem.out.println(s1.name);//null
+System.out.println(s2.name); //null
+}
+}
+
+
+
+
+class Student
+{
+String name;
+public static void main(Stringp[] args)
+{
+Student s1=new Student();
+s1.name="zeeshan";
+Student s2=new Student();
+s2.name="zahid";
+Systeem.out.println(s1.name);//null
+System.out.println(s2.name); //null
+}
+
+
+class Student
+{
+String name;
+Student(String name1)
+{
+name=name1;
+}
+
+public static void main(String[] args)
+{
+Student s1=new Student("zeeshan");
+Student s2=new Student("zahid");
+System.out.println(s1.name);
+System.out.println(s2.name);
+}
+}
+
+Constructor is used to initialize the object
+
+There are 2 types of constructor
+
+1.no argument constructor
+
+class Test
+{
+Test() ---> no argument constructor
+{
+
+}
+}
+
+2.parametrized constructor
+
+class Test
+{
+Test(int i)
+{
+
+}
+}
+
+Default Constructor
+-------------------------
+
+Compiler generates default constructor and it is generated when there is no constructor 
+in a class
+
+every class in java contains constructor either default constructor generated by compiler
+or customized constructor generated by programmer
+
+Prototype of default constructor
+------------------------------------
+
+class Test
+{
+Test()
+{
+super();
+}
+
+}
+
+every default consructor is a no argument construtcor but every no argument constructor is not 
+a default constructor
+
+there is only one statement inside default constructor i.e call to super(super())...
+
+default constructor is used to provide default values
+
+the only applicable modifier for default constructor is public and default
+
+case 1:
+------------
+
+class Test
+{
+Test()
+{
+System.out.println("hello");
+super();
+}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:7: error: call to super must be first statement in constructor
+super();
+     ^
+1 error
+
+the first statement inside constructor should be either super() or this()... if we are not writing anything
+then compiler will always place super() as the first statement
+
+case 2:
+-----------
+class Test
+{
+
+Test()
+{
+super();
+this();
+
+	}
+}
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:7: error: call to this must be first statement in constructor
+this();
+    ^
+
+the first statement inside constructor should be either super() or this() but not both
+simultaneously
+
+case 3:
+------------
+
+class Test
+{
+
+public void m1()
+	{
+	super();
+	System.out.println("hiii");
+	}
+}
+
+we cant write super() or this() anywhere except constructor that too as the first statement
+
+         super,this                                                        super(),this()
+	 -----------                            ------------------------------------------------
+
+these are keywords                                             these are constructor calls
+
+these are used to call the super or                       these are used to call super or current class
+current class non static variables                          constructor respectively
+respectively
+
+these are used everywhere except                          these are used only inside constructor as a 
+static area                                                              first statement
+
+these can be used any no of times                          these can be used only once
+
+
+
+                                   Constructor overloading
+				   ---------------------------
+
+creating multiple constructors with same name but different arguments is called constructor overloading
+
+
+class A
+{
+A()
+{
+this(10);
+System.out.println("no arg");
+}
+
+A(int i)
+{
+this(10.5);
+System.out.println("int arg");
+}
+
+A(double d)
+{
+System.out.println("double arg");
+}
+
+public static void main(String[] args)
+{
+A a =new A();
+A a1=new A(10);
+A a2=new A(10.6);
+
+}
+}
+
+C:\Users\zahid\Desktop\430>java Test
+double arg
+int arg
+no arg
+double arg
+int arg
+double arg
+
+
+class Test
+{
+Test(int i)
+	{
+	System.out.println(i);
+	System.out.println("hii");
+}
+}
+
+class Demo extends Test
+{
+	Demo()
+	{
+		super(10); ---> //calling the parent class constructor
+		System.out.println("bye");
+	}
+
+	public static void main(String[] args)
+	{
+		Demo d =new Demo();
+	}
+}
+
+o/p 
+----
+
+10
+hii
+bye
+
+super,this
+-----------------------
+
+class Test
+{
+int x=10;
+pubic static void main(String[] args)
+{
+Demo d =new Demo();
+d.m1();
+
+}
+}
+
+class Demo  extends Test
+{
+int x=100;
+public void m1()
+{
+System.out.println(super.x); //10
+System.out.println(this.x);  ///100
+}
+}
+
+class ConstructorsTest
+{
+    public static void main(String[] args)
+    {
+        U u = new U(); //U
+        U u1 = new U(1);//u
+        V v = new V(); //V
+        V v1 = new V(1);//v
+        T t = new T(); //VT
+        T t1 = new T(1);//Vt
+    }
+}
+
+class U {
+    V v = new V();
+
+    U() { System.out.print("U"); }
+
+    U(int i) { System.out.print("u");}
+}
+
+class V {
+    V() { System.out.print("V"); }
+
+    V(int i) { System.out.print("v"); }
+}
+
+class T extends V {
+
+    T()
+    { 
+    super();
+    System.out.print("T");
+    }
+
+    T(int i) 
+    {
+    super();
+    System.out.print("t");
+    }
+}
+
+
+identification of static memebers from top to bottom
+exceution of static variable assignment and blocks from top to bottom
+execution of main() 
+------> object
+identification of non static variable members
+execution of non static variable assignment and blocks from top to bottom
+execution of constructor
+
+
+class Test
+{
+	static
+	{
+		System.out.println("static block");
+	}
+	Test()
+	{
+		System.out.println("hii");
+	}
+    public static void main(String[] args)
+    {
+      U u=new U();
+    }
+	{
+		System.out.println("test class block");
+	}
+}
+
+class U {
+   Test t=new Test();
+   U()
+	{
+	   System.out.println("hello");
+	}
+	{
+		System.out.println("bye");
+	}
+}
+
+
+C:\Users\zahid\Desktop\mmrng batch>java Test
+test class block
+hii
+bye
+hello
+
+can we override a constructor????????
+
+we cant override a constructor
+
+class A
+{
+A()
+{
+
+}
+
+}
+
+class B extends A
+{
+
+A()   --->// invalid'
+
+{
+
+}
+}
+
+we cant inherit constructor
+
+class A                                                         abstract class A                                                                  interface A
+{                                                                     {                                                                                               {
+A()                                                                A()                                                                                             A ()
+{                                                                    {                                                                                                {
+
+}                                                                        }                                                                                               }
+
+}                                                                 }                                                                                                      }
+
+valid                                                          valid                                                                                            invalid
+
+we can create constructor in every class in java including abstract class but not in interface???
+
+we can create constructor inside abstract class to initialize the variable but we cant create constructor inside 
+interface  because variable present inside interface is by default final..
+
+
+public class M {
+
+	public static void main(String[] args) {
+		m1();
+		
+	}
+	public static void m1()
+	{
+		m2();
+	}
+	
+	public static void m2()
+	{
+		
+	m1();
+	}
+}
+
+recursive method call is always runtime exception : StackOverFlowError
+
+public class M {
+
+	M()
+	{
+		this(10);
+		
+	}
+	M(int i)
+	{
+		this();
+	}
+}
+
+recursive constructor invocation is always a compile time error
+
+program to show constructor initializing the variable
+---------------------------------------------------------------
+
+class Test
+{
+
+static int x=10;
+Test()
+	{
+	x=20;
+}
+public static void main(String[] args)
+	{
+	Test t=new Test();
+	System.out.println(x);
+	}
+}
+
+o/p ---> 20
+
+---------------------------------------------------------------------------------
+
+class A
+{
+A()
+{
+super();    ---> default constructor
+}
+
+}
+
+class B extends A
+{
+B()
+{
+super();               ---> default constructor
+}
+}
+
+Inheritance is possible because of constructor chaining(calling one construtcor from another constructor)...
+------------------------------------------------------------------
+
+class A
+{
+A()
+{
+
+}
+
+}
+
+
+class B extends A
+{
+
+
+}
+ 
+ possible
+--------------------------------------------------------------------
+
+class A 
+{
+
+A(int  i)
+{
+
+}
+}
+
+class B extends A
+{
+
+
+}
+
+CE
+
+class Test
+{
+private Test()
+	{
+
+	}
+}
+
+class A extends Test
+{
+A()
+	{
+	super();
+	}
+
+}
+
+C:\Users\zahid\Desktop\mmrng batch>javac Test.java
+Test.java:13: error: Test() has private access in Test
+        super();
+        ^
+1 error
+
+if we decalare constructor as private then we cant create child class 
+
+Questions related to constructor
+----------------------------------------
+
+what is constructor?? why it is used??
+
+how many types of constructors are there??
+
+who and when default constructor is generated??
+
+what is the difference between super() and super??
+
+what is the differnce between this() and this???
+
+can we overload constructor???
+
+can we override a constructor???
+
+can we inherit the constructor???
+
+can we create constructor inside abstract class???
+
+can we create construtcor inside interface???
+
+ho do we achieve constructor chaining???
+
+what are the modifiers applicable for constructor???
+
+can a constructor be declared as private and if yes then what is the use of declaring constructor as private???
+
+can we keep return  type for constructor???
+
+how do default constructor diffrent from no arg constructor???
+
+----------------------------------------------------------------------------------------------------------------------------
+
+Factory method
+-----------------------
+
+By using class if we are calling a method  and that method returns the same class object such type of method is known as
+Factory method
+
+Runtime r=Runtime.getRuntime();
+
+
+Singleton class
+--------------------
+
+for any java class if we are allowed to create a single object such type of class is known as Singleton class
+
+examples
+----------------
+
+Runtime class
+Action Servlet
+ServiceLocator
+BuisnessDelegate
+
+
+Runtime r1=Runtime.getRuntime();
+Runtime r2=Runtime.getRuntime();
+Runtime r3=Runtime.getRuntime();
+Runtime r4=Runtime.getRuntime();
+
+System.out.print;ln(r1==r2); //true
+System.out.print;ln(r2==r3); //true
+
+Advantage of Singleton class
+=--------------------------------
+
+if the requirement is same then instead of creating a seperate object for every person we will vreate only
+one object and we can share that object for every required person...this can be achieved by Singleton class
+
+the main advantages are performance will be improved and memory utilization will be improved
+
+class Test
+{
+private static Test t=new Test();
+private Test()
+{
+
+}
+
+public static Test getTest()
+{
+if(t==null)
+t=new Test();
+return t;
+}
+public static void main(String[] args)
+{
+
+Test t1=Test.getTest();
+Test t2=Test.getTest();
+System.out.println(t1==t2); //true
+
+}
+
+}
+
+                                                          Object type casting
+							  ------------------------
+
+converting from one type of object to another type of object is known as Object type casting
+
+1. Object o=new String("srk"); // upcasting
+
+Parent class reference can be used to hold child class object
+
+2. Runnable r =new Thread();
+
+Runnable ---> interface
+Thread ---> implementation class
+
+Interface reference can be used to hold its implementation class object
+
+Object o=new String("srk");
+StringBuffer sb=(StringBuffer)o;
+
+
+A      B    =    (C) D;
+
+A ---> class/interface name
+B ---> object reference
+C ---> class/interface name
+D ---> object reference
+
+Steps to check Object type casting
+-----------------------------------------
+
+step1 : Compile time checking 1
+--------------------------------------------
+
+there must be some relation of 'D' with 'C' otherwise we will get compile time error saying incompatible types
+
+Object o=new String("srk");
+StringBuffer sb=(StringBuffer)o; //valid
+
+String s =new String("zeeshan");
+StringBuffer sb=(StringBuffer)s;
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:8: error: incompatible types: String cannot be converted to StringBuffer
+StringBuffer sb=(StringBuffer)s;
+                              ^
+1 error
+
+
+step 2:  Compile time checking 2
+--------------------------------------------
+'C' must be either same as 'A' or it should be the child class of 'A' otherwise we will get compile time
+error saying  incompatible types
+
+Object o =new String("zeeshan");
+StringBuffer sb=(StringBuffer)o; //  valid
+
+Object o=new String("srk");
+StringBuffer sb=(String)o;
+
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+Test.java:8: error: incompatible types: String cannot be converted to StringBuffer
+StringBuffer sb=(String)o;
+                ^
+1 error
+
+Runtime checking
+-----------------------------
+the runtime object of 'D' must be either same or child class of 'C' otherwise we will get Runtime Exception 
+saying ClassCastException
+
+Object o =new String("zeeshan");
+StringBuffer sb=(StringBuffer)o; // RE:ClassCastException
+
+
+q) While object type casting whether a new object is created or not???
+
+
+Integer I=new Integer(10);
+Number n=(Number)I;
+
+System.out.println(I==n);
+
+while object type casting no new object is created and the existing object will get a new reference 
+
+                                                                Data Hiding
+								--------------------
+our internal data should not go outside directly or outside person should not acccess our internal directly..this 
+is known as data hiding
+
+the main advantage of data hiding is security
+
+how to achieve data hiding
+------------------------------
+
+we can achieve data hiding by declaring our data members(variables) as private
+
+class Account
+{
+private double balance; //data hiding
+------------------------;
+------------------------;
+------------------------;
+}
+
+                                                                               ABSTRACTION
+									       -----------------------
+
+Hiding the internal implementation and providing the functionality to the user is known as abstractipon
+
+by using abstract class and by using interface we can achieve abstraction
+
+abstract class [1-100%]
+interface [100%]
+
+ADVANTAGE OF ABSTRACTION
+-----------------------------------------------
+
+SECURITY
+
+EASY TO USE
+
+TO ACHIEVE LOOSE COUPLING
+
+                                                            COUPLING
+							    --------------
+
+DISTANCE --> km / m/ /light year
+
+time  ---------> hour/min/sec
+
+dependency   --->  coupling
+
+the degree of dependency is called coupling
+
+there are 2 types of coupling
+-------------------------------------
+
+1. tight coupling ( more dependent)
+2. losse coupling (less dependent)
+
+if we make any change in one class and the other class gets affected then it is said to be tight coupling
+
+if we make any changes in one class and the other class doesnt get affected then it is known as loose coupling
+
+Class A
+{
+static int x=B.y;
+}
+
+class B
+{
+static int y=C.z;
+}
+
+class C
+{
+static int z=D.m1();
+}
+
+class D
+{
+public static int m1()
+{
+return 20;
+}
+
+the above is the example of tight coupling
+
+
+ENCAPSULATION
+--------------------------------
+
+BINDING OF DATA AND METHODS INTO A SINGLE UNIT IS KNOWN AS ENCAPSULATION
+
+e.g ---> all java classes are example of encapsulation
+
+class A
+{
+
+data (variables)
+
+        +
+
+
+functions(methods)
+
+}
+
+Encapsulation = data hiding + abstraction
+
+any appliication following data hhiding and abstraction is said to be encapsulated
+
+
+public class Student {
+
+	private String name;
+	private int id;
+	
+	public void setName(String name1)
+	{
+		name=name1;
+	}
+	
+	public void setId(int id1)
+	{
+		id=id1;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public int getId()
+	{
+		return id;
+		
+	}
+	public static void main(String[] args) {
+		Student s1=new Student();
+		s1.setName("zeeshan");
+		s1.setId(10);
+		System.out.println(s1.getName());
+		System.out.println(s1.getId());
+
+	}
+
+}
+
+zeeshan
+10
+
+Polymorphism
+--------------------------
+
+same name with differen forms is known as poly morphism
+
+m1()
+m1(int i)
+m1(double d)
+
+
+Object o=new String();
+ Object o=new Test();
+Object o =new StringBuffer()
+Object o=new Integer(10);
+
+There are 2 types of polymorphism
+
+1. compile time polymorphism (method overloading & method hiding)
+2. runtime polymorphism  (method overriding)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+                                                          java. lang package
+							  ------------------------
+
+we need not import java.lang package because it by default availaible to all java classes
+
+class Test
+{
+public static void main(String[] args)
+{
+
+
+}
+}
+
+------------------------------------------------------------------------------------------
+
+Object class
+String class
+StringBuffer
+StringBuilder
+Wrapper classes
+Autoboxing
+aUTOUNBOXING
+
+                                                                           Object class
+									   -------------
+
+it is the supermost class in java means every class in java is a child class of Object class directly or indirectly
+
+if a class is not extending any other class then that class is said to be direcct child class of Object class
+
+class A     -------->Direct child class of Object class
+{
+
+}
+
+if a class extends any other class then that class is said to be indirect child class of Object class
+
+class B extends A       -------------------> Indirect child class of Object class
+{
+
+}
+
+why Object class is the supermost class????
+
+String class ----> concat()
+
+Test   ---> t.concat();
+
+Test t=new String();
+t.concat();
+
+all the methods present inside Object class is by default availaible to all java classes...........
+
+METHODS OF OBJECT CLASS
+-----------------------------------------
+
+1. toString()
+2. hashCode()
+3. equals()
+4. getClass()
+5. clone()
+6. finalize()
+7. wait()
+8. wait(long ms)
+9. wait(long ms, int ns)
+10. notify()
+11. notifyAll()
+
+
+1. toString()
+-------------------
+
+it is used to convert any object into String...
+
+whenever we try to print object reference internally toString() is called
+
+Student s=new Student();
+System.out.println(s);  -------------------> System.out.println(s.toString())
+
+
+public class Student {
+
+	String name;
+	Student(String name)
+	{
+		this.name=name;
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+	Student s =new Student("zeeshan");
+	Student s1=new Student("zahid");
+	System.out.println(s);   ------------------------------> System.out.println(s.toString());
+	System.out.println(s1); -------------------------------> System.out.println(s1.toString());
+	
+		}
+
+	}
+
+com.ijce15.Student@7637f22
+com.ijce15.Student@3830f1c0
+
+
+whenever we call Object class toString() method output will always be in the form of address
+
+implementation of Object class toString()
+---------------------------------------------------
+
+public String toString()
+{
+return getClass().getName() + "@"+ Integer.toHextString(hashCode());
+}
+
+
+if we want exact output then we must override toString() in our class
+
+public class Student {
+
+	String name;
+	Student(String name)
+	{
+		this.name=name;
+		
+	}
+	
+	public String toString()   // overring toString()
+	{
+		return name;
+	}
+	public static void main(String[] args) 
+	{
+	Student s =new Student("zeeshan");
+	Student s1=new Student("zahid");
+	System.out.println(s); ----------------------------------------------> System.out.println(s.toString());
+	System.out.println(s1);
+	
+		}
+
+	}
+
+
+public class Test   
+{
+	
+	public static void main(String[] args) throws InterruptedException 
+	{
+	String s1=new String("shifa");
+	System.out.println(s1);
+	}
+}
+
+o/ p ---> shifa
+
+In String class,StringBuffer class,StringBuilder, all wrapper classes and collection class,toString() is overriden
+ 
+2. hashCode()
+---------------------
+
+for every object there is a unique number generated by JVM ,that unique number is nothing but hashcode
+
+class Test
+{
+public static void main(String[] args)
+{
+Test t1=new Test();
+Test t2=new Test();
+System.out.println(t1.hashCode());
+System.out.println(t2.hashCode());
+}
+}
+
+123961122
+942731712
+
+hashcode doesnt represent the address of an object
+
+
+we are obtaining hashcode from the address of an object but hashcode is not the address
+
+it is used for the searching operation
+
+we can generate our own hashcode by overriding hashCode() in our class...
+
+there are 2 types of oveeriding hashCode()
+
+improper way of overriding
+-------------------------------------
+class Student
+{
+public int hashCode()
+{
+return 10;
+}
+
+}
+
+if all objects have same hashCode then it is said to be improper way of overriding hashcode
+
+proper way of overriding
+-------------------------------
+
+if all objects are having uniques hashCode then it is said o be proper way of overriding hashcode
+
+class Student
+{
+public int hashCode()
+{
+return roll;
+}
+}
+
+Object class toString() internally calls hashCode()
+
+                                             toString()   vs hashCode
+					     ---------------------------------------
+
+public class Test   
+{
+	int i;
+	Test(int i)
+	{
+		this.i=i;
+	}
+	public static void main(String[] args) throws Exception 
+	{
+	Test t1=new Test(10) ;
+	Test t2=new Test(16) ;
+	System.out.println(t1); ---------------> System.out.println(t1.toString());
+	System.out.println(t2);
+	
+	
+	}
+}
+
+com.program.Test@7637f22
+com.program.Test@3830f1c0
+
+                                                       calls
+Object -------------> toString()  --------------> hashCode() ----------> Object class
+
+public String toString()
+{
+return getClass().getName() + "@"+ Integer.toHextString(hashCode());
+}
+
+=--------------------------------------------------------------------------------------------------------------------------------
+
+public class Test   
+{
+	int i;
+	Test(int i)
+	{
+		this.i=i;
+	}
+	public int hashCode()
+	{
+		return i;
+	}
+	public static void main(String[] args) throws Exception 
+	{
+	Test t1=new Test(10) ;
+	Test t2=new Test(16) ;
+	System.out.println(t1);
+	System.out.println(t2);
+	
+	
+	}
+}
+
+
+                                       calls
+toString()[Object] ----------------------------> hashCode() [Test]
+
+public String toString()
+{
+return getClass().getName() + "@"+ Integer.toHextString(10);
+}
+
+
+com.program.Test@a
+com.program.Test@10
+
+
+--------------------------------------------------------------------------------------------
+
+public class Test   
+{
+	int i;
+	Test(int i)
+	{
+		this.i=i;
+	}
+	public int hashCode()
+	{
+		return i;
+	}
+	
+	public String toString()
+	{
+		return i+" ";
+	}
+	public static void main(String[] args) throws Exception 
+	{
+	Test t1=new Test(10) ;
+	Test t2=new Test(15) ;
+	System.out.println(t1); //System.out.println(t1.toString());
+	System.out.println(t2);
+	//System.out.println(t1.hashCode());
+	
+	}
+	}
+
+3. equals()
+---------------------
+
+public class Test   
+{
+	int i;
+	Test(int i)
+	{
+		this.i=i;
+	}
+
+	public static void main(String[] args) throws Exception 
+	{
+	Test t1=new Test(10) ;
+	Test t2=new Test(10) ;
+	System.out.println(t1==t2); //false
+	System.out.println(t1.equals(t2));//false
+	
+	
+	
+	}
+}
+
+== operator is alwys meant for reference commparison...
+
+equals() is used to compare the objects...sometimes reference of the object and some time the content of the opbject
+
+Object class equals() is always going to compare the reference 
+
+if we want to compare the content then we need to override equals() in our class
+
+class Student
+{
+String name;
+Student(String name)
+{
+this.name=name;
+}
+
+public boolean equals(Object o)
+{
+String name1=this.name;
+Student s =(Student)o;
+String name2=s.name;
+if(name1.equals(name2))
+return true;
+else
+return false;
+}
+
+public static void main(String[] args)
+{
+Student s1=new Student("sachin");
+Student s2=new Student("sachin");
+System.out.println(s1.equals(s2)); //true
+}
+}
+
+
+public class Test   
+{
+	int x;
+	Test(int x)
+	{
+		this.x=x;
+	}
+	
+	public boolean equals(Object o)
+	{
+		int a=this.x;
+		Test t=(Test)o;
+		int b=t.x;
+		if(a==b)
+			return true;
+		else
+			return false;
+	}
+	public static void main(String[] args) throws Exception 
+	{
+	Test t1=new Test(10);
+	Test t2=new Test(10);
+	System.out.println(t1.equals(t2)); //true
+	}
+}
+
+case 1:
+-------------
+
+public static void main(String[] args) throws Exception 
+	{
+	Integer x=new Integer(10);
+	Integer y=new Integer(10);
+	System.out.println(x.equals(y)); //true
+	}
+
+public static void main(String[] args) throws Exception 
+	{
+	String s1=new String("srk");
+	String s2=new String("srk");
+	System.out.println(s1.equals(s2));
+	}
+
+In String class ,all wrapper classes , equals() is overriden
+
+finalize()
+--------------
+
+Objects created inside method
+--------------------------------------------
+
+class Test
+{
+public static void main(String[] args)
+{
+m1();
+    --------------------------------------------> 2 obbjects are eligible for GC
+}
+
+public static void m1()
+{
+
+Test t1=new Test();
+Test t2=new Test();
+}
+}
+
+t1,t2  are local variables and these are created at the time of method m1() execution and it will be destroyed once
+m1() method execution completes
+
+
+class Test
+{
+public static void main(String[] args)
+{
+Test t= m1();
+    --------------------------------------------> 1 object is eligible for GC
+}
+
+public static Test m1()
+{
+
+Test t1=new Test();
+Test t2=new Test();
+return t1;
+}
+}
+-------------------------------------------------------------------------------------
+
+class Test
+{
+static Test t;
+public static void main(String[] args)
+{
+m1();
+    --------------------------------------------> 1 object is eligible for GC
+}
+
+public static void m1()
+{
+
+t=new Test();
+Test t1=new Test();
+
+}
+}
+------------------------------------------------------------------------------------------------------
+
+                                                                Island of Isolation
+								---------------------------
+
+class Test
+{
+Test i;
+public static void main(String[] args)
+{
+Test t=new Test();
+Test t1=new Test();
+Test t2=new Test();
+t.i=t1;
+t1.i=t2;
+t2.i=t;
+t=null;
+            ----------------------------------> 0 object is eligible for GC
+t1=null
+          -------------------------------------> 0 object is eligible for GC
+t2=null;
+         ------------------------------------->  all oobjects are eligible for GC...
+
+	 }
+	 }
+
+
+we can make an object eligible for GC but we cant destroy it....
+
+
+
+Requesting JVM to call garbage collector
+--------------------------------------------------------
+
+there are 2 ways to request jvm to call Garbage collector
+
+1. by using System class
+2.by using Runtime class
+
+                                                             Finalization
+							     ----------------
+
+whenever an object become useless jvm calls garbage collector
+
+jvm call finalize method on that object to de allocate networkbase and database (clean up activites)...
+
+on n/w base and database is deallocated automatically useless object will be destroyed.........
+
+public class Test   
+{
+	
+	public static void main(String[] args) throws Exception 
+	{
+	Test t=new Test();
+	t=null;
+	System.gc(); // way to request to jvm to call gc
+	System.out.println("end of main");
+	}
+	
+	public void finalize()
+	{
+		System.out.println("finalize method called");
+	}
+}
+
+
+probable output
+---------------------
+end of main
+finalize method called
+
+or
+
+finalize method called
+end of main
+
+public class Test   
+{
+	
+	public static void main(String[] args) throws Exception 
+	{
+	String t=new String();
+	t=null;
+	System.gc(); // way to request to jvm to call gc
+	System.out.println("end of main");
+	}
+	
+	public void finalize()
+	{
+		System.out.println("finalize method called");
+	}
+}
+
+output
+----------------
+
+end of main
+
+if GC calls finalize() on an object then the corresponding class finalize () will be executed....
+
+can we call finalize() explicitly ?????
+
+yes we can call finalize() explicitly  but when we call finalize method usless object are not destroyed..it is only destroyed 
+when GC calls finalize()
+
+public class Test   
+{
+	
+	public static void main(String[] args) throws Exception 
+	{
+	Test t=new Test();
+	t.finalize();
+	t.finalize();
+	t=null;
+	System.gc(); // way to request to jvm to call gc
+	System.out.println("end of main");
+	}
+	
+	public void finalize()
+	{
+		System.out.println("finalize method called");
+	}
+}
+
+finalize method called
+finalize method called
+end of main
+finalize method called
+
+-----------------------------------------------------------------------------------------------------------------------
+
+public class Test   
+{
+
+	static Test s;
+	public static void main(String[] args) throws Exception 
+	{
+	Test t=new Test();
+	System.out.println(t.hashCode());
+	t=null;
+	System.gc();
+	Thread.sleep(1000);
+	System.out.println(s.hashCode());
+	s=null;
+	System.gc();
+	System.out.println("end of main");
+
+}
+	public void finalize()
+	{
+		System.out.println("finalize  method called");
+		s=this;
+	}
+}
+
+123961122
+finalize  method called
+123961122
+end of main
+
+
+Garbage collector can call finalize method on a particular object only once....
+
+------------------------------------------------------------------------------------------------------------------------------
+
+String s1=new String("spring");
+s1.concat("fall");
+String s2=s1.concat("summer");
+System.out.println(s1);
+System.out.println(s2);
+
+
+                                                               Methods of String class
+							       ----------------------------
+
+public char charAt(int index)  --->  returns the character present at specified index
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="zeeshan";
+System.out.println(s.charAt(5)); //a
+System.out.println(s.charAt(0));//z
+System.out.println(s.charAt(100)); //RE:StringIndexOutOfBoundsException
+	}
+
+}
+
+
+2. public boolean equals(Object o)
+
+for content comparaison and in this case,case is important
+
+3. public boolean equalsIgnoreCase(Object o) --> content comparison where case is not important
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="java";
+System.out.println(s.equals("java")); //true
+System.out.println(s.equals("Java")); //false
+System.out.println(s.equalsIgnoreCase("JAVA")); // true
+
+	}
+
+}
+
+4.public String substring(int begin)  --> returns the substring pfrom begin index to end of the String
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="rajeshkhanna";
+System.out.println(s.substring(7));
+
+	}
+
+}
+
+5. public String substring(int begin,int end) --> returns substring from begin to end-1 index
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="rajeshkhanna";
+System.out.println(s.substring(4,9));
+
+	}
+
+}
+
+shkha
+
+6. int length() ---> return the no of characters present in a String
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="rajeshkhanna";
+System.out.println(s.length()); //12
+
+	}
+
+7.	public String replace(char old,char new) --> replace every old charactre with new character
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s="abababababababa";
+System.out.println(s.replace('a','b'));
+
+	}
+bbbbbbbbbbbbbb
+
+8.public String toLowerCase() ---> it converts every uppercase into Lower case
+
+9.public String toUpperCase() ---> it converts into uppercase
+
+public static void main(String[] args) {
+		
+String s="ZEeShAn";
+System.out.println(s.toLowerCase());
+System.out.println(s.toUpperCase());
+
+	}
+
+}
+
+10. public String trim() ---> removes the spaces present at beginning and the end of a String but not from middle
+
+public static void main(String[] args) {
+		
+String s="                      java              developer           ";
+System.out.println(s.trim());
+
+	}
+
+}
+
+o/p :java              developer
+
+11. public int indexOf(char ch) --> it returns the index of specified character
+
+public static void main(String[] args) {
+		
+String s="javadeveloper";
+System.out.println(s.indexOf('d'));
+System.out.println(s.indexOf('z'));
+System.out.println(s.indexOf('u'));
+System.out.println(s.indexOf('a'));
+
+	}
+
+}
+
+4
+-1
+-1
+1
+
+case :
+
+public static void main(String[] args) {
+		
+String s="java";
+String s2=s.toUpperCase();
+String s3=s.toLowerCase(); 
+System.out.println(s==s2); //false
+System.out.println(s==s3); // true
+
+
+	}
+
+}
+
+
+
+
+public static void main(String[] args) {
+		
+String s="java";
+String s2=s.toString();
+System.out.println(s==s2); //true
+
+
+	}  
+
+                                                                     final   vs immmutability
+								     ---------------------------
+
+final modifier is applicable for variables and immutability concept is applicable for objects
+
+if the reference variable is declared as final then we cant reassign the reference variable but it doesnt mean we can perform
+any changes in the content
+
+final StringBuffer sb=new StringBuffer("salman");
+sb.append("khan");
+sb=new StringBuffer("akshay"); //CE
+System.out.println(sb);
+
+Creation of our own immutable class
+-------------------------------------------
+
+once we create an object we cant perform any changes in the existing object
+
+if we are trying to perform any changes with those changes a new object will be created 
+
+if there is no change in content then the existing  object will be reused 
+
+class Test
+{
+private int i;
+Test(int x)
+{
+this.i=x;
+}
+
+public Test modify(int y)
+{
+if(this.i==y)
+return this;
+else
+return (new Test(y));
+}
+
+public static void main(Strring[] args)
+{
+Test t1=new Test(10);
+Test t2=t1.modify(100);
+Test t3=t1.modify(10);
+System.out.println(t1==t2); //false
+System.out.println(t1==t3); // true
+
+}
+
+}
+
+
+                                                                  StringBuffer
+								  ------------------
+
+if the content will change frequently then always go for StringBuffer
+
+Constructor
+----------------------
+
+StringBuffer sb=new StringBuffer();
+
+it creates an emoty StringBuffer object with default capacity "16"
+
+new capacity=(current capacity + 1)*2;
+
+StringBuffer sb=new StringBuffer();
+System.out.println(sb.capacity()); //16
+sb.append("abcdefghijklmnop");
+System.out.println(sb.capacity()); ///16
+sb.append("q");
+System.out.println(sb.capacity()); //34
+
+2. StringBuffer sb=new StringBuffer(int initial capacity);
+
+		
+StringBuffer sb=new StringBuffer(17);
+
+System.out.println(sb.capacity()); // 17
+
+3. StringBuffer sb=new StringBuffer(String s)
+
+capacity = s.length() + 16;
+
+StringBuffer sb=new StringBuffer("zeeshan");
+
+System.out.println(sb.capacity()); // 23
+
+
+Methods of StringBuffer class
+----------------------------------------
+
+1.public int length() ---> retturns the no of ccharacters present in StringBuffer
+
+2. public int capacity() ---> total no of character which StringBuffer can hold
+
+3. public char charAt(int index) ---> retruns the character present at specified index
+
+public static void main(String[] args) {
+		
+StringBuffer sb=new StringBuffer("javadeveloper");
+System.out.println(sb.length()); //13
+System.out.println(sb.capacity()); //29
+System.out.println(sb.charAt(7)); //e
+System.out.println(sb.charAt(30)); //StringIndexOutOfBoundsException
+
+		}
+
+4.public void setCharAt(int index, char ch)-- > replace the character locating at specified indec
+
+StringBuffer sb=new StringBuffer("javadeveloper");
+sb.setCharAt(7, 'z');
+System.out.println(sb);
+
+5.public StringBuffer append(String s);
+   public StringBuffer append(int i);
+   public StringBuffer append(long l);
+   public StringBuffer append(double d );
+   public StringBuffer append(boolean b);
+   public StringBuffer append(float f);
+   public StringBuffer append(int index,Object o);
+
+StringBuffer sb=new StringBuffer();
+sb.append("PI value is :");
+sb.append(3.14);
+sb.append(" bingo ");
+sb.append(true);
+System.out.println(sb);
+
+PI value is :3.14 bingo true
+
+6. public StringBuffer delete(int begin,int end) --> delete characters from begin to end-1 index
+
+7. public StringBuffer deleteCharAt(int index) --->deletes the charactre at specified index
+
+StringBuffer sb=new StringBuffer("javadeveloper");
+sb.delete(2, 6);
+System.out.println(sb);//javeloper
+sb.deleteCharAt(5);
+System.out.println(sb);//javelper
+
+8. public StringBuffer reverse();
+
+StringBuffer sb=new StringBuffer("javadeveloper");
+
+System.out.println(sb.reverse());
+
+every method present in StrinBuffer is synchronized hence at a time only one thread is allowed 
+
+                                                                              StringBuilder
+									      ------------------
+
+StringBuilder is exactly same as StringBuffer(including constructors and methods) except that StrinngBuilder is 
+non synchronized
+
+                                                       Wrapper Classes
+						       --------------------
+
+                     primitive data types                                                             Wrapper classes
+		     -----------------------                                                   -------------------------------
+
+		            byte                                                                                      Byte
+			    short                                                                                     Short
+			    int                                                                                        Integer
+			    long                                                                                      Long
+			    float                                                                                     Float
+			    double                                                                                   Double
+			    char                                                                                       Character
+			    boolean                                                                                  Boolean
+
+
+Constructors of wrapper classes
+-------------------------------------------
+
+nearly all wrapper classes contain 2 types of constructors
+
+1. with primitive type as an argument
+2. with String as an argument
+
+
+Integer I=new Integer(10); // primitive type argument
+
+Integer I=new Integer("10"); //String type argument
+
+Integer I=new Integer('a'); // valid
+
+Integer I=new Integer("ten"); // RE:NumberFormatException
+
+Integer I=new Integer(); //invalid
+
+Double d =new Double(10.5); // valid
+
+Double d =new Double("10.5"); // valid
+
+Double d =new Double(10.5f); // valid
+
+Float f =new Float(10.5f); // valid
+
+Float f =new Float("10.5f"); // valid
+
+Float f =new Float(10.5); // valid
+
+Float class contain 3 types of constructors with primitive,String  and double as an argument
+
+Character c =new Character('a'); // valid
+
+Character c =new Character("a"); // invalid
+
+Character class contains only oe constructor with primitive type as an argument
+
+Booolean b=new Boolean(true); // true
+
+Boolean b =new Boolean(True); // CE
+
+Boolean b=new Boolean(false); // false
+
+Boolean b=new Boolean(False); // CE
+
+Boolean b=new Boolean(zeeshan); // ce
+
+if we are passing primitive as an argument to the Boolean class object,then only allowed arguments are true and false
+and case is important...
+
+Booolean b=new Boolean("true"); // true
+
+Boolean b =new Boolean("True"); // true
+
+Boolean b=new Boolean("false"); // false
+
+Boolean b=new Boolean("False"); // false
+
+Boolean b=new Boolean("zeeshan"); //false
+
+if we pass String type as an argument to the Boolean class object then except true everything is treated as false
+and case is not important
+
+                       Wrapper classes                                                                  no of constructors
+		      -------------------------                                                   ----------------------------------
+
+		      Byte                                                                                                   2
+		      Short                                                                                                 2
+		      Integer                                                                                              2
+		      Long                                                                                                   2
+		      Float                                                                                                  3
+		      Double                                                                                               2
+		      Character                                                                                          1
+		      Boolean                                                                                              2
+
+
+public static void main(String[] args) {
+		
+		Boolean b1=new Boolean("yes");
+		Boolean b2=new Boolean("no");
+		System.out.println(b1); // false
+		System.out.println(b2); //false
+		System.out.println(b1.equals(b2)); //true
+
+		}
+
+In all wrapper classes toString() is overriden 
+
+In all wrapper classes equals() is overriden
+
+                                              Methods of wrapper classes
+					      ---------------------------------
+
+1. valueOf() 
+2. xxxValue()
+3. parseXxx()
+4. toString()
+
+
+1. valueOf() method
+--------------------------
+
+We can use valueOf() methods to create  wrapper classes for the given primitive or String...
+
+Form -1 
+----------
+public static wrapper valueOf(String s);
+
+every wrapper classes except Character class contains a static valueOf() to create wrapper  object for the given String
+
+
+		Integer I=Integer.valueOf("10");
+		Double d =Double.valueOf("10.5");
+		Boolean b=Boolean.valueOf("true");
+		System.out.println(I);
+		System.out.println(d);
+		System.out.println(b);
+
+10
+10.5
+true
+
+Form 2:
+------------
+
+public static Integer valueOf(String s,int base)
+
+Every integral type wrapper class(Byte,Short,Integer,Long) contains  the above valueOf()
+
+it converts specified base  String to wrapper object
+
+public static void main(String[] args) {
+		
+		Integer I=Integer.valueOf("100", 2);
+		System.out.println(I); //4
+		}
+
+Allowed base
+------------------------
+
+base 2  -->  0 to 1
+base 8  -->  0 to 7
+base 10 --> 0 to 9
+base 11 -->  0 to 9, a
+base 16 --> 0 to 9,a-f
+base 36 --> 0 to 9,a-z
+
+the allowed range for base is from 2 to 36
+
+Form 3
+----------------
+
+public static wrapper valueOf(primitive p)
+
+every wrapper class including Character class contains valueOf(primitive p)
+
+
+Integer I=Integer.valueOf(10);
+	Double d =Double.valueOf(10.5);
+	Boolean b=Boolean.valueOf(true);
+	Character c=Character.valueOf('a');
+	System.out.println(I);
+	System.out.println(d);
+	System.out.println(b);
+	System.out.println(c);
+}
+}
+
+2. xxxValue()
+---------------------
+
+we can use xxxValue() to convert wrapper object to primitive
+
+Everey Number type wrapper class (Byte,Short,Integer,Long,Float,Double) contains the following 6 xxxValue()
+
+public static void main(String[] args) {
+		
+	Integer I=new Integer(130);
+	System.out.println(I.byteValue());
+	System.out.println(I.shortValue());
+	System.out.println(I.intValue());
+	System.out.println(I.floatValue());
+	System.out.println(I.longValue());
+	System.out.println(I.doubleValue());
+		}
+		
+		
+	}
+
+-126
+130
+130
+130.0
+130
+130.0
+
+xxxValue()
+
+xxx ---> primitive data type
+
+charValue()
+-----------------
+
+Character class conatin charValue() to conver Character class object to char primitive
+
+	public static void main(String[] args) {
+		
+Character c =new Character('a');
+System.out.println(c.charValue());
+		}
+		
+		
+	}
+
+booleanValue()
+----------------------------------
+
+Boolean class conatin booleanValue() to conver Boolean class object to boolean primitive
+
+public static void main(String[] args) {
+		
+Boolean b=new Boolean("dilip sahab");
+System.out.println(b.booleanValue()); // false
+		}
+		
+		
+	}
+
+parseXxx()
+------------------
+
+String ----> corresponding primitive
+
+public static primitive paresXxx(String s)
+
+Every wrapper classes contain parseXxx() except Character class
+
+int i=Integer.parseInt("10");
+boolean b=Boolean.parseBoolean("jspiders");
+double d =Double.parseDouble("10.5");
+System.out.println(i);
+System.out.println(b);
+System.out.println(d);
+
+Form 2:
+-------------
+
+public static primitive parseXxx(String s, int base)
+
+int i=Integer.parseInt("101",2);
+
+System.out.println(i); // 5
+
+2    1      0  --->position
+1    0      1
+
+
+1 * 2^0  + 0*2^1 + 1*2^2 = 1 + 4 = 5
+
+                                               Autoboxing    and AutoUnboxing
+					       -------------------------------------
+
+
+Integer I= 10;
+
+10  ---> int (primitive)
+I   --->Integer( non primitive)
+
+Automatic conversion of primitive into its corresponding non primitive data type by compiler is known as Autoboxing...
+
+Internally Autoboxing concept is implemented by using valueOf()
+                           after compilation
+Integer I=10;     --------------------------->   Integer I=Integer.valueOf(10);
+
+----------------------------------------------------------------------------------------------------------------
+
+Integer I=new Integer(10);
+int i= I;
+
+I ---> non primitive data type
+i  ---> primitive data type
+
+Automatic conversion of wrapper class object into its corresponding primitive data type by compiler is known as Autounboxing
+
+Internally AutoUnboxing concept is implemented by using  xxxValue()
+
+class Test
+{
+static Integer I=10;                                      ---> Autoboxing
+public static void main(String[] args)
+{
+int i=I;                                                            - -->Autounboxing
+m1(i);
+}
+public static void m1(Integer K) //Integer K=i; ---> Autoboxing
+{
+int x=K;                                                             --->Autounboxng
+System.out.println(x);
+}
+}
+
+
+
+case 1:
+-----------
+
+class Test
+{
+static Integer I;
+public static void main(String[] args)
+{
+int x=I; --->Autounboxing
+System.out.println(x); //NullPointerException
+}
+}
+
+whenever we perform autounboxing on null we will always getNullPointerExcepption
+
+case 2:
+------------
+
+public static void main(String[] args)
+{
+Integer x= 10;
+Integer y=x;
+x++;
+System.out.println(x); //11
+System.out.println(y); //10
+System.out.println(x==y); //false
+}
+}
+
+all wrapper classes are immutable
+
+case 3:
+---------------
+
+Integer x=10;
+Integer y=10;
+System.out.println(x==y); //true
+
+Integer x=100;
+Integer y=100;
+System.out.println(x==y); //true
+
+Integer x=1000;
+Integer y=1000;
+System.out.println(x==y); // false
+
+To implement autoboxing concept in every wrapper classes a buffer of objects will be created at tthe time of class loading
+
+by autoboxing if an object is required to create 1st JVM will check wheteher that object is availaible in buffer or not
+
+if object is availaible then no new object will be created and that same object will be reused if not availaible then a
+new object will be created
+
+Boolean b1=true;
+		Boolean b2=true;
+		System.out.println(b1==b2); //true
+
+
+                Double d =10.5;
+		Double d1=10.5;
+		System.out.println(d==d1); //false
+
+Buffer concept is not applicable for float and double classes
+
+Integer I1=new Integer(10);
+Integer I2=new Integer(10);
+System.out.println(I1==I2); //false
+
+Integer x= 10;
+Integer y=10;
+System.out.println(x==y); //true
+
+Integer x =Integer.valueOf(10);
+Integer y=Integer.valueOf(10);
+System.out.println(x==y); // true
+
+Integer x=new Integer(10);
+Integer y=Integer.valueOf(10);
+System.out.println(x==y); // false
+
+                                             WIDENING VS AUTOBOXING
+					     ----------------------------------------
+
+public class Test {
+
+ public static void m1(Integer x)
+ {
+	 System.out.println("hii");
+ }
+ 
+ public static void m1(double d)
+ {
+	 System.out.println("bye");
+ }
+	public static void main(String[] args) {
+		
+		int i=3;
+		m1(i); // Bye
+		}
+		
+		
+	}
+
+priority is given to widening not autoboxing
+ 
+                                                           WIDENING   VS   VAR ARG
+							   ----------------------------------
+
+public class Test {
+
+ public static void m1(int...x)
+ {
+	 System.out.println("hii");
+ }
+ 
+ public static void m1(double d)
+ {
+	 System.out.println("bye");
+ }
+	public static void main(String[] args) {
+		
+		int i=3;
+		m1(i);   // bbye
+		}
+		
+		
+	}
+
+                                                                                   AUTOBOXING    VS     VAR ARG
+										   ------------------------------------------
+
+
+public class Test {
+
+ public static void m1(int...x)
+ {
+	 System.out.println("hii");
+ }
+ 
+ public static void m1(Integer I)
+ {
+	 System.out.println("bye");
+ }
+	public static void main(String[] args) {
+		
+		int i=3;
+		m1(i);    // BYE
+		}
+		
+		
+	}
+
+
+Widening  >  autoboxing  >  var arg
+
+class Test
+{
+public  static void main(String[] args)
+{
+
+int x = 10;
+m1(x);                            ----> CE
+
+}
+
+public static void m1(Long l )
+{
+System.out.println("hiii");
+}
+}
+
+widening followed by autoboxing is not implemented in java but autoboxing followed by widening is implemengted
+
+public class Test {
+
+ public static void m1(Object o)
+ {
+	 System.out.println("hii");
+ }
+ 
+
+	public static void main(String[] args) {
+		
+		int i=3;
+		m1(i);              ----> hii
+		}
+		
+		
+	}
+
+
+                                                    Exception handling
+						    ----------------------
+
+An unwanted,unexpected event that disturbs the normal flow of the program is known as Exception
+
+whenever an exception rises it is mandatory to handle the exception
+
+the main objective of exxception handling is to achieve graceful termination of the program
+
+providing an alternative way so that we can continue with the rest of the program is a concept of exception handling
+
+Runtime stack mechanism
+---------------------------------
+
+class Test
+{
+public static void main(String[] args){
+
+m1();
+}
+public static void m1()
+{
+m2();
+}
+public static void m2()
+{
+system.out.println("hiii");
+}
+}
+
+for every thread JVM will create a seperate stack at the time Thread creation
+
+all the method calls performed by that thread will be stored in that stack
+
+each entry in stack is called activation record or  stack frame
+
+after completing every method call JVM removes the corresponding entry from stack
+
+after completing all method calls  JVM destroys the empty stack and terminates the program
+
+DEfault Exception handling in java
+--------------------------------------------
+
+class Test
+{
+public static void main(String[] args){
+
+m1();
+}
+public static void m1()
+{
+m2();
+}
+public static void m2()
+{
+System.out.println(10/0); // --> exception
+}
+}
+
+the method inside which an exception rises is responsible to create an exception object with the foll information
+
+1. Name of the Exception
+2. Description of Exception
+3. Location of The Exception
+
+after creatin the exception object , the method handsover that object to JVM
+
+JVM checks wheteher that method contains any exception handling code or not,if not, then JVM terminates that method 
+abnormally 
+
+Jvm identifies its caller method and checks whether that method contains exception handling code or not
+if not terminates the method abnormally
+
+this process continues till main() and termainates the main() abnormally
+
+then JVM handsover the exception object to	Default Exception handler
+
+Default Exception handler just prints the excdeption information to the console int the following format
+
+Exception in thread"xxx"(main) Name of the Exception: description
+Location of the Exception(stack trace)
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.m2(A.java:14)
+	at jsr.A.m1(A.java:10)
+	at jsr.A.main(A.java:7)
+
+
+
+
+Exceptions are caused by our programme ,it is recoverable
+
+Errors are not cause by our program ,it is caused due to the lack of system resources ,it is non recoverable
+
+there are 2 types of Exception
+----------------------------------------
+
+Checked Exception  --> the exceptions which are checked by compiler is kniwn as checked Exception
+
+UncheckedException --> the exceptions which are not checked by compiler
+
+wheteher it is checked or unchecked, all exception rises at runtime only
+
+RuntimeException and its child classes,Error and its child classes are UncheckedException,except these 
+all are Checked Exception
+
+
+CUSTOMIZED EXCEPTION HANDLING BY USING TRY-CATCH
+----------------------------------------------------------------------------------
+
+Syntax
+-----------
+
+try
+{
+Risky code(the code which may rise an exception)
+}
+catch(Exception e)
+{
+Handling code
+}
+
+without using try-catch
+------------------------------
+
+public static void main(String[] args) {
+		
+		System.out.println("hii");
+		System.out.println(10/0);
+		System.out.println("bye");
+	 }
+}
+
+hii
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.main(A.java:8)
+
+	with try-catch
+	--------------------
+
+	public static void main(String[] args)
+	{
+System.out.println("hii");
+try
+{
+System.out.println(10/0);
+}
+catch(ArithmeticException e)
+{
+System.out.println(10/2);
+}
+System.out.println("bye");
+}
+}
+
+hii
+5
+bye
+
+
+Control flow in try catch
+--------------------------------------
+
+try
+{
+statement 1;
+statement 2;
+statement 3;
+}
+
+catch(X e)
+{
+statement 4;
+}
+
+statement 5;
+
+}
+}
+
+case 1: if there is no exception 
+o/p ---> 1 2 3 5
+
+case 2: if an exception rises at statement 2 and  we handle that exception in catch block
+o/p ---> 1 4 5
+
+Note: within try block if anywhere an exception rises then where that exception is handled or not ,the rest of try block 
+wont be executed
+
+case 3:  if an exception rises at statement 2 and  we dont handle that exception in catch block
+   o/p ---> 1 Exception
+
+case 4:    if an exception rises at statement 4
+o/p ----> 1 2 3 5
+
+Various methods to print exception information
+---------------------------------------------------------
+
+Throwable  class define the following methods to print exception information
+
+1. printStackTrace():
+-------------------------------
+this method print exception information in the following format:
+
+Name of the Exception : Description
+Location of the Exception
+
+
+2. toString()
+-----------------------
+
+this method print exception information in the following format:
+
+Name of the Exception : Description
+
+3.getMessage()
+---------------------
+
+this method print exception information in the following format:
+
+ Description
+
+public static void main(String[] args) {
+		
+		
+		try
+		{
+		System.out.println(10/0);
+		
+		}
+		catch(ArithmeticException e)
+		{
+		1. e.printStackTrace();
+	         2.System.out.println(e.getMessage());
+		 3.System.out.println(e.toString());
+		}
+		
+	 }
+}
+
+1.  java.lang.ArithmeticException : / by zero
+    at jsr.A.main(A.java:10)
+
+ 2.  / by zero
+
+3.  java.lang.ArithmeticException : / by zero
+
+
+                                                               Try with multiple catch block
+							       ----------------------------------------
+
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println(10/0);
+}
+
+catch(ArithmeticException e)
+{
+System.out.println("hii");
+}
+
+catch(Exception e)
+{
+System.out.println("bye");
+}
+}
+}
+
+o/p ---> hiii
+
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println(10/0);
+}
+
+catch(Exception e)
+{
+System.out.println("hii");
+}
+
+catch(ArithmeticException e)
+{
+System.out.println("bye");
+}
+}
+}
+
+CE: unreachable block
+
+
+try with multiple catch block is possible but the order of catch block is very important
+
+it should be from child to parent but not from parent to child
+
+                                                                    finally block
+								    -----------------
+
+when there is no exception
+--------------------------------------
+
+public static void main(String[] args) {
+		
+		
+		try
+		{
+
+System.out.println("try");
+		}
+		catch(Exception e)
+		{
+			System.out.println("catch");
+		}
+		finally
+		{
+			System.out.println("finally");
+		}
+		
+		
+	 }
+}
+
+try
+finally
+
+case 2: when there is an exception and it is handled
+-------------------------------------------------------------
+
+public static void main(String[] args) {
+		
+		
+		try
+		{
+
+System.out.println("try");
+System.out.println(10/0);
+		}
+		catch(Exception e)
+		{
+			System.out.println("catch");
+		}
+		finally
+		{
+			System.out.println("finally");
+		}
+		
+		
+	 }
+
+try
+catch 
+finally
+
+case 3: exception rises but not handled
+-------------------------------------------------
+
+ public static void main(String[] args) {
+		
+		
+		try
+		{
+
+System.out.println("try");
+System.out.println(10/0);
+		}
+		catch(NullPointerException e)
+		{
+			System.out.println("catch");
+		}
+		finally
+		{
+			System.out.println("finally");
+		}
+		
+		
+	 }
+}
+
+try
+finally
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.main(A.java:12)
+
+
+it is a block which is always associated with try block
+
+it is always executedd irrespective of whether an exception is rising or not or whthere an exception 
+is handled or not
+
+                                                      return   vs   finally
+						      -------------------------------
+
+public class A {
+
+	 public static void main(String[] args) {
+		
+		
+		System.out.println(m1());
+}
+	 public static int m1()
+	 {
+		 try
+		 {
+			 return 10;
+		 }
+		 catch(Exception e)
+		 {
+			 return 20;
+		 }
+		 finally
+		 {
+			 return 30;
+		 }
+	 }
+}
+
+30
+
+before execution of return statement in try block first finally block is executed
+
+difference between final ,  finally and finalize()
+-------------------------------------------------------------
+
+final : it is a modifier which is applicable for variable, methods and classes
+
+if a variable is declared as final then we cant change the value of that variable
+
+if a method is declared as final we cant override that method
+
+if a class is declared as final then we cant inherit it
+
+---------------------------------------------------------------------------------------------
+
+finally: it is a block which is always associated with try block 
+
+it is executed every time irrespective of wheteher an exception is rising or not or whether an exception is being handles or not
+
+-----------------------------------------------------------------------------------------------
+
+finalize() : it is a method which is always invoked by garbage ciollector to perform clean up activities
+
+System. exit(0)
+-------------------------
+
+there is only one situation where finally block wont be executed .i.e whenever we are using System.exit() method
+
+System.exit() ---> JVM shuts down
+
+public static void main(String[] args) {
+		
+		
+		
+		 try
+		 {
+			 System.out.println("try");
+			 System.exit(0);
+		 }
+		 catch(Exception e)
+		 {
+			 System.out.println("catch");
+		 }
+		 finally
+		 {
+			 System.out.println("finally");
+		//	 return 30;
+		 }
+	 }
+}
+
+o/p ---> try
+
+ public static void main(String[] args) {
+		
+		
+		
+		 try
+		 {
+			 System.out.println("try");
+			 System.out.println(10/0);
+			 
+		 }
+		 catch(Exception e)
+		 {
+			 System.out.println("catch");
+			 System.exit(0);
+		 }
+		 finally
+		 {
+			 System.out.println("finally");
+		//	 return 30;
+		 }
+	 }
+}
+
+o/p ---> try
+              catch
+
+special cases
+-----------------
+
+System.out.println(10/0);   Exception in thread "main" java.lang.ArithmeticException: / by zero
+	                                     at jsr.A.main(A.java:7)
+
+
+System.out.println(10.0/0);  o/p --> Infinity
+
+System.out.println(0/0);  Exception in thread "main" java.lang.ArithmeticException: / by zero
+	                                     at jsr.A.main(A.java:7)
+
+System.out.println(0.0/0);  o/p -->NaN   (Not a Number)
+
+
+Various possible combinations of try catch and finally
+-----------------------------------------------------------------
+
+try{}
+catch(){}  ---> valid
+
+try{}
+catch(x e ){}
+catch( y e){}    ---> valid
+
+
+try{}
+catch(x e ){}
+catch( x e){}  ---> invalid
+
+
+try{}
+catch(x e){P}
+finally{}           ---> valid
+
+try{}  --->invalid --->  'try' without 'catch' or 'finally'
+
+catch(x e){}   ---> CE      'catch without try
+
+finally {} ---> invalid   'fianlly' without 'try'
+
+try{}
+finally{}   ---> valid
+
+try{}
+System.out.println("hii");
+catch(x e){}                             --->  invalid
+
+try{}
+catch(x e){}
+Sopln("hii");
+catch(y e){}     ---> invalid
+
+
+try{}
+catch(x e){}
+sopln("hii");
+finally{}              ---> invalid
+
+
+try{}
+finally{}
+catch(x e){}      ---> invalid
+
+                                                  throw statement
+						  -------------------
+
+public class A  {
+
+	
+	 public static void main(String[] args)  {
+		
+		System.out.println(10/0);
+
+	 }
+}
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.main(A.java:8)
+
+
+----------------------------------------------------------------------------------------
+class Test
+{
+
+public static void main(String[] args)
+{
+throw new ArithmeticException();
+}
+}
+
+ new ArithmeticException() --> creation of an exception object
+
+throw   --> to handover our created exception object to JVM
+
+
+Exception in thread "main" java.lang.ArithmeticException
+	at jsr.A.main(A.java:8)
+
+
+sometimes we can create an exception object explicitly and we can handover it to jvm manually by  using throw keyword
+
+if(amount > balance)
+throw new InSufficientBalance();
+
+throw keyword is used to create our own customized exception....
+
+case 1:
+------------
+
+public class A  {
+
+	static ArithmeticException e =new ArithmeticException();
+	 public static void main(String[] args)  {
+		
+	throw	e;
+
+	 }
+}
+
+public class A  {
+
+	static ArithmeticException e ;
+	 public static void main(String[] args)  {
+		
+	throw	e;
+
+	 }
+}
+
+Exception in thread "main" java.lang.NullPointerException: Cannot throw exception because "jsr.A.e" is null
+	at jsr.A.main(A.java:8)
+
+case 2:
+--------------
+
+class Test
+{
+public static void main(String[] args)
+{
+System.out.println(10/0);
+System.out.println("hii");
+}
+
+}
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.main(A.java:8)
+
+class Test
+{
+public static void main(String[] args)
+{
+throw new ArithmeticException();
+System.out.println("hii");
+}
+
+}
+
+CE: unreachable code
+
+after throw statement we cant write any other statement otherwise we will get CE saying unreachable code....
+
+public class A  {
+
+	
+	 public static void main(String[] args)  {
+		
+		 throw new A();
+
+	 }//
+}
+
+CE
+
+public class A extends RuntimeException  {
+
+	
+	 public static void main(String[] args)  {
+		
+		 throw new A();
+
+	 }//
+}
+
+we can use throw keyword only for throwable types but bot for normal java class object
+
+class Test
+{
+
+public static void main(String[] args)
+{
+String accNo=args[0];
+String accName=args[1];
+int pin_Num=Integer.parseInt(args[2]);
+String accType=args[3];
+System.out.println("Account details");
+System.out.println("------------------");
+System.out.println("AccountNumber :" + accNo);
+System.out.println("Account name :" + accName);
+System.out.println("AccountTYPE :"+accType);
+System.out.println("Account pin Number : " + pin_Num);
+if(pin_Num>=1000 && pin_Num<=9999)
+	System.out.println("valid pin Nmuber");
+else
+	throw new RuntimeException("Invalid pin number,enter 4 digit pin number");
+}
+}
+
+
+
+C:\Users\zahid\Desktop\IJCE15>java Test abc123 AAA 000 savings
+Account details
+------------------
+AccountNumber :abc123
+Account name :AAA
+AccountTYPE :savings
+Account pin Number : 0
+Exception in thread "main" java.lang.RuntimeException: Invalid pin number,enter 4 digit pin number
+        at Test.main(Test.java:20)
+
+C:\Users\zahid\Desktop\IJCE15>javac Test.java
+
+C:\Users\zahid\Desktop\IJCE15>java Test xyz789 BBB 1234 saving
+Account details
+------------------
+AccountNumber :xyz789
+Account name :BBB
+AccountTYPE :saving
+Account pin Number : 1234
+valid pin Nmuber
+
+
+                                                             throws keyword
+							     ------------------
+
+class Test
+{
+public static void main(String[]  args)
+{
+Thread.sleep(1000);
+}
+}
+
+
+Thread.sleep(1000); --->  it throws an InterruptedException ---> checkedException  ---> CE
+
+the above Exceptions can be handled in the following 2 ways
+
+1. by using try catch
+
+2.  by using throws keyword
+
+
+ using try catch
+-----------------------
+
+public class A  {
+
+	
+	 public static void main(String[] args)  {
+		
+		 try
+		 {
+		Thread.sleep(100);
+
+	 }
+		 catch(InterruptedException e)
+		 {
+			 
+		 }
+}
+}
+
+
+by using throws keyword
+----------------------------------
+
+public class A  {
+
+	
+	 public static void main(String[] args) throws InterruptedException  {
+		
+		 
+		Thread.sleep(100);
+
+	 
+}
+}
+
+the main objective of throws keyword is to handover the responsibility of exception handling ti its caller( it may be another 
+method or JVM) .....
+
+
+public class A  {
+
+	
+	 public static void main(String[] args)  throws InterruptedException  {
+		
+		 m1();
+	 }
+	 
+	 public static void m1() throws InterruptedException
+	 {
+		 m2();
+	 }
+	 
+	 public static void m2() throws InterruptedException
+	 {
+	 
+		Thread.sleep(100);
+
+	 
+}
+}
+
+
+usage of throws keyword for unchecked exception  then there is no use....
+
+ public static void main(String[] args)  throws Exception  {
+		
+		System.out.println("main starts");
+		System.out.println(10/0);
+		System.out.println("main ends");
+}
+
+main starts
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at jsr.A.main(A.java:9)
+
+
+
+class Test
+{
+public static void main(String[] args) throws Test
+{
+
+
+}
+
+}
+
+CE
+
+
+public class A extends Exception {
+
+	
+	 public static void main(String[] args)  throws A  {
+		
+		}
+}
+
+
+
+throws keyword is applicable only for throwable types but not for normal java class
+
+
+case 2:
+------------
+
+class Test ---> throws Exception  ---> invalid
+{
+
+Test()  ---> throws Exxception   ---> valid
+{
+
+}
+
+public void m1() throws Exception    ---> valid
+{
+
+}
+
+}
+
+throws keyword is applicable for methods and constructors but not for classes
+
+public class A   {
+
+	A() throws InterruptedException 
+	{
+		Thread.sleep(1000);
+	
+	}
+	
+	 public static void main(String[] args) throws InterruptedException   {
+		
+		 A a =new A();
+		}
+}
+
+case 3:
+-----------
+
+class Test
+{
+
+public static void main(String[] args)
+
+{
+throw new Exception();
+}
+
+}
+
+CE: 
+--------------------------------------------------
+
+class Test
+{
+
+public static void main(String[] args)
+
+{
+throw new Error();
+}
+
+}
+
+RE
+
+Customized Exception
+------------------------------
+
+import java.util.Scanner;
+
+public class A  {
+
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("enter the age");
+		int age=scn.nextInt();
+		
+		if(age> 60)
+			throw new TooOldException("no use of getting married");
+		else if(age<18)
+			throw new TooYoungException("thehro zara sabar kro");
+		else
+			System.out.println("correct time to get married");
+	}
+	
+}
+
+class TooYoungException extends RuntimeException
+{
+	TooYoungException(String s)
+	{
+		
+	}
+}
+
+class TooOldException extends RuntimeException
+{
+	TooOldException(String s)
+	{
+		
+	}
+	
+}
+
+ArrayIndexOutOfBoundsException
+----------------------------------------------
+
+public class A  {
+
+	public static void main(String[] args) {
+		
+		int[] x =new int[10];
+		x[1]=10;
+		x[0]=20;
+		x[3]=30;
+		System.out.println(x[0]);
+		System.out.println(x[100]); --->AIOOBE
+	}
+	
+}
+
+NullPointerException
+---------------------------
+
+public class A  {
+
+	public static void main(String[] args) {
+		
+		String s= null;
+		System.out.println(s.length());  //NullPointerException
+	}
+	
+}
+
+3.StackOverFlowError
+----------------------------------
+
+public class A  {
+
+	public static void main(String[] args) {
+		
+		m1();
+	}
+	public static void m1()
+	{
+		m2();
+	}
+	
+	public static void m2()
+	{
+		m1();
+	}
+	
+}
+
+Rethrowing an Exception
+----------------------------------
+
+to convert the one exception type to another exception type
+
+public class A  {
+
+	public static void main(String[] args) {
+		
+		try
+		{
+	System.out.println(10/0);
+		}
+		catch(Exception e)
+		{
+			throw new NullPointerException();
+		}
+	
+}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                           Arrays
+							   ----------
+
+int x = 10;
+int y= 20;
+int z=30;
+.
+.
+.
+.
+1000 values
+
+
+int[]  x =new int[1000];
+
+Array in an indexed collection of fixed no of homogenous elements...
+
+the main advantage of array is we can store huge nom of elements in a single variable
+
+the main disadvantage of array is
+
+1. fixed in size
+
+2. homogenous elements
+
+
+single dimensional array declaration 
+----------------------------------------------
+
+int[] x ;  ---> valid   ---> Recommended
+int  []x; ----> valid
+int   x[]; ---> valid
+
+int[5] x;  ---> invalid
+
+at the time of declaration we cant specify the size of an array....
+
+two dimensional array
+-------------------------------
+
+int[][] x;  ---> Recommended
+int  [][]x;
+int  x[][];
+int[] []x;
+int[]  x[];
+int   []x[];
+
+all are valid
+
+
+int[] x =new int[3];   ---> valid
+
+int[] x =new int[];    ---> invalid
+
+
+C:\Users\zahid\Desktop\11am>javac A.java
+A.java:7: error: array dimension missing
+        int[] x =new int[];
+                          ^
+1 error
+
+at the time of array creation we must specify the size otherwise we will get Ce
+
+
+int[] x =new int[0]; ---> valid
+	System.out.println(x.length); //0
+
+an array with size zero is in java is possible
+
+
+public static void main(String  args[])
+{
+	
+	System.out.println(args.length); //0
+}
+
+-------------------------------------------------------
+
+int[] x =new int[-2];  ---> invalid
+
+
+C:\Users\zahid\Desktop\11am>java Student
+Exception in thread "main" java.lang.NegativeArraySizeException: -2
+        at Student.main(A.java:7)
+
+if we are taking array size as -ve then we will get RE saying NegativeArraySizeException
+
+byte b= 10;
+int[] x =new int[b]; ---> valid
+
+short s =20;
+int[] x =new int[s]; ---> valid
+
+int[] x =new int['a']; ---> valid
+
+int[] x =new int[10l]; ---> invalid
+
+
+C:\Users\zahid\Desktop\11am>javac A.java
+A.java:8: error: incompatible types: possible lossy conversion from long to int
+        int[] x =new int[10l];
+                         ^
+1 error
+
+
+the allowed data types to specify the size of an array are byte,short,int,char....
+
+int[] x =new int[2147483647]; ---> valid
+
+int[] x =new int[2147483648]; ---> invalid
+
+int[] x =new int[3]; 
+
+int[] x =new int[21];
+		System.out.println(x.getClass().getName()); //[I
+
+
+boolean[] b=new boolean[60];
+System.out.println(b.getClass().getName()); // [Z
+
+                                                  array type                                                 corresponding class
+						  -------------                                          --------------------------------
+
+
+double[] d =new double[5];
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+                                                                   Array Initialization
+								   --------------------------
+
+int[] x =new int[3];
+
+System.out.println(x); [I@23bd5ab
+System.out.println(x[0]); //0
+
+1.  int[][] x =new int[3][2];
+System.out.println(x); // [[I@23b2bc5d
+System.out.println(x[0]);// [I@1b4ca5sd
+System.out.println(x[0][0]); // 0
+
+2.   int[][] x =new int[3][];
+System.out.println(x);       // [[I@23b2bc5d
+System.out.println(x[0]);  // null
+System.out.println(x[0][0]); // NullPointerException
+
+
+int[] x = new int[5];
+x[0]= 10;
+x[1]=20;
+x[2]=30;
+x[3]=40;
+x[4]=50;
+x[5]=60;  //RE:ArrayIndexOutOfBoundsException
+x[-1]=70;   ////RE:ArrayIndexOutOfBoundsException
+x[2.5]=70; CE
+
+when we create an array , default values will be stored, once we initialize it then that value will replace the default value
+
+
+ Array declaration,creation and initialization in a single line
+ ------------------------------------------------------------------------
+
+ int[] x;  ---> declaration
+
+ x=new int[3];   ----> creation
+
+ x[0]=10;
+ x[1]=20;     -----> initialization
+ x[2]=30;
+
+int[] x ={10,20,30};
+
+
+
+Dynamically inserting the elemnets in an array
+-----------------------------------------------------------
+
+public class B {
+
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=scn.nextInt();
+		int[] x =new int[size];
+	    for(int i=0;i<size;i++)
+	    {
+	    	x[i]=scn.nextInt();
+	    }
+		
+		
+	}
+}
+
+
+
+                                                               length     vs     length()
+							       ------------------------------
+
+length
+------------
+
+int[] x =new int[3];
+System.out.println(x.length()); // CE
+System.out.println(x.length);   // 3
+
+length is a final variable which represents the size of an array
+
+it is applicable only for arrays
+
+
+length()
+------------
+
+String s="Dilip";
+System.out.println(s.length()); ---> 5 
+System.out.println(s.length);   ---> CE
+
+
+length() is a final method which is applicable for String
+
+it represents the no of characters present inside a String
+
+
+String[] s ={"a" , "aa" , "aaa"};
+System.out.println(s.length);  // 3
+System.out.println(s.length()); //CE
+System.out.println(s[0].length); //CE
+System.out.println(s[0].length());//1
+
+public class B {
+
+	public static void main(String[] args) {
+		
+		sum(new int[] {10,20,30,40});
+		
+	}
+	
+	public static void sum(int[] x)
+	{
+		int total=0;
+		for(int z:x)
+		{
+			total+=z;
+		}
+		System.out.println("the sum is"+ total);
+	}
+}
+
+
+int[] x =new int[5];
+x[0]= 10;
+x[1]='a';
+byte b= 30;
+x[2]=b;
+short s = 40;
+x[3]=s;
+x[4]=10l;  ---> invalid
+
+Object[] a=new Object[10];
+a[0]=new Object();
+a[1]=new String("zee");
+a[2]=new Integer(10);
+-----------------------------------------------
+
+Number[]  n =new Number[10];
+n[0]=new Integer(10);
+n[1]=new Double(10.5);
+n[2]=new String("zeeshan"); CE: incompatible types
+
+
+In case of non primitive array , as the array element we can take either same type or its child classes
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+int[] x ={10,20,30,40};
+
+char[] ch={'a','b','c'};
+
+int[] a=x;   ---> valid
+
+int[] b = ch;  ---> invalid
+
+
+char ---> int  ---> valid
+
+char[]   --->   int[]    ---> invalid
+
+int ----> double   // valid
+
+int[] ----> double[] // invalid
+
+float ---> int  // invalid
+
+float[] ----> int[] // invalid
+
+String ---> Object
+
+String[] ---> Object[]
+
+
+String[] s={"a" ,"ab","abc"};
+Object[] a=s;   -----------------> valid
+
+int[] a ={10,20,30,40,50};
+
+int[] b ={60,70};
+
+
+a=b ;
+System.out.println(a[0]); //60
+	System.out.println(a[1]); 70
+	System.out.println(a[2]); //IOOBE
+    System.out.println(a==b); true
+
+    --------------------------------------------------------------------------
+
+    int[][] x =new int[3][];
+
+    x[0]= new int[4][3];    ---------> invalid
+
+    x[0]=10;                    ---------> invalid
+
+    x[0]= new int[2];       ----------> valid
+
+
+----------------------------------------------------------------------
+
+public static void main(String[] args)
+{
+for( int i=0;i<=args.length;i++)
+{
+solpn(args[i]);
+}
+}
+
+jaava Test A   B   C
+
+A
+B
+C
+IOOBE
+------------------------------------------------------------------------------------------------------------
+
+class Test
+{
+public static void main(String[] args)
+{
+String[] argh={"x" , "y" , "z"};
+args=argh;
+for(String s:args)
+{
+System.out.println(s);
+}
+
+}
+
+java Test A B C
+
+C:\Users\zahid\Desktop\new batch>java Student
+x
+y
+z
+
+
+
+int[][] x=new int[4][3];
+x[0]=new int[4];
+x[1]=new int[2];
+x=new int[3][2];
+-------------------------------------------
+
+total how many objets are created   ---> 11
+
+total how many objects are eligible for gc --->  7
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+WAP to check whether a given number is prime or not
+
+public static void main(String[] args)
+{
+Scanner scn=new Scanner(System.in);
+System.out.println("enter the value of n");
+int n=scn.nextInt();
+
+int count=0;
+for(int i=1;i<=n;i++)
+{
+if(n % i==0)
+{
+count++;
+}
+}
+if(count==2)
+System.out.println(n + " is a prime number");
+else
+System.out.println(n + " is not a prime number");
+
+}
+}
+
+
+WAP to check whether a number is perfect or not
+
+6  ---> 1  2   3
+
+a positive integer number that is equal to the sum of its proper divisor
+
+Scanner scn=new Scanner(System.in);
+	System.out.println("enter the value of n");
+	int n=scn.nextInt();
+
+	int sum=0;
+	for(int i=1;i<=n/2;i++)
+	{
+	if(n % i==0)
+	{
+	sum+=i;
+	}
+	}
+	if(sum==n)
+	System.out.println(n + " is a perfect number");
+	else
+	System.out.println(n + " is not a perfect number");
+
+WAP to find the factorial of a number
+------------------------------------------------
+
+5! = 1*2*3*4*5
+
+	
+public static void main(String[] args) {
+	
+	Scanner scn=new Scanner(System.in);
+	System.out.println("enter the value of n");
+	int n=scn.nextInt();
+	int fact = 1;
+	for(int i=2;i<=n;i++)
+	{
+		fact *=i;
+	}
+	System.out.println("the factorial of "+ n + " is " + fact);
+	}
+	}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+                                                        Collection framework
+							-----------------------------
+
+int x =10;
+int y= 20;
+int z= 30;
+.
+.
+.
+.
+
+1k values to be stored....
+
+int[] x =new int[1000];
+
+dISADVANTAGE OF AN ARRAY
+-------------------------------------------
+
+fixed in size
+
+contains only homogenous elements
+
+to overcome these Collection came into picture
+
+9 key interfaces of Collection framework
+------------------------------------------------------
+
+Collection
+List
+Set
+'SortedSet
+NavigabkeSet
+Queue
+Map
+SortedMap
+Navigable Map
+
+Collection (I)
+-------------------
+
+we will always tok about non primitive data types(object) but not primitive data types
+
+if we want to represent a group of individual objects as a single entity then we should go for collection...
+
+Methods of Collection interfaces
+--------------------------------------------
+
+boolean add(Object o);
+boolean addAll(Collection c);
+boolean remove(Object o);
+boolean removeAll(Collection c);
+boolean retainAll(Collection c);
+void clear();
+boolean contains(Object o);  ---> to check wheteher a particular object is present or not
+boolean containsAll(Collection c);
+boolean isEmpty()
+int size()
+Object[] toArray()
+Iterator iterator();  ---> cursor of java
+
+
+
+List(I)
+-------------
+
+it is the child interface of Collection
+
+if we want to represent a group of individual pobjects as a single entity where duplicates are allowed and
+insertion order is preserved then we should go for List
+
+
+duplicates are allowed   ---> duplicate elements are allowed
+
+insertion order is preserved ---> the order in which we add or insert the elements in the same order we will get the o/p
+
+
+index plays an important role in List because of the following
+
+Duplicate elements can be differentiated with the help pof index...
+
+insertion order is also preserved with the help of index
+
+List interface methods
+----------------------------------
+                     
+boolean add(int index, Object o)
+                           
+boolean addAll(int index, Collection c)  ---> group of elements are added from specified index onwards
+
+Object get(int index)  ---> it retrieves  the element present at the specified index
+
+Object remove(int index)
+
+Object set(int index, Object o) ---> replace
+
+int indexOf(Object o)
+
+ListIterator listIterator()  ---> cursor of java
+
+ArrayList
+--------------
+
+
+the underlying data structure is resizeable array or growable array
+
+duplicate elements are allowed
+
+insertion order is preserved
+
+heterogenoues elements are allowed(except TreeSet and TreeMap)
+
+null insertion is possible
+
+it implements Serializable,CLONEABLE AND rANDOMaCCESS INTERFACE
+
+Constructor
+------------------
+
+ArrayList l=new ArrayList();
+
+Default capacity = 10;
+new capacity =(initial capacity *3/2)+1;
+
+ArrayList l=new ArrayList(int initial capacity);
+
+ArrayList l=new ArrayList(Collection c);
+
+
+ArrayList l=new ArrayList();
+	l.add("a");
+	l.add(10);
+	l.add("a");
+	l.add(null);
+	System.out.println(l);
+	l.add(2, "z");
+	System.out.println(l);
+	System.out.println(l.get(3));
+	l.remove(3);
+	System.out.println(l);
+	l.set(2, "a");
+	System.out.println(l);
+	System.out.println(l.indexOf("a"));
+	l.addAll(3, l);
+	System.out.println(l);
+	System.out.println(l.removeAll(l));
+	System.out.println(l);
+
+	[a, 10, a, null]
+[a, 10, z, a, null]
+a
+[a, 10, z, null]
+[a, 10, a, null]
+0
+[a, 10, a, a, 10, a, null, null]
+true
+[]
+
+
+When our frequent operation is retrievel operation then arraylist is the best choice
+
+when our frequent operation is insertion or deletion operation from the middle then arrayList is teh worst choice because of internal shifting
+
+all the methods present inside ArayList is non synchronized
+
+Getting synchronized version of ArrayList
+-----------------------------------------------------
+
+Collections class defines the following method to return synchronized version of List
+
+public static List synchronizedList(list l);
+
+
+ArrayList l=new ArrayList();
+
+l ---> non synchronized
+
+List l1=Collections.synchronizedList(l);
+
+l1 ---> synchronized
+
+
+LinkedList
+--------------------
+
+the underlying data structure is double LinkedList
+
+if our frequent operation is insertion or deletion from middle then LinkedList is the best choice
+
+if our frequent operation is retrieval operation then LinkedList is the worst choice
+
+Duplicate is allowed
+Heterogenous elements are allowed
+
+null insertion is possible
+
+insertion order is preserved
+
+implements Serializable and Cloneable but not RandomAccess
+
+Constructor
+---------------------
+
+LinkedList l=new LinkedList();
+
+LinkedList l=new LinkedList(Collection c)
+
+usually LinkedList can be used to implement Stack and queues
+
+void addFirst(Object o)
+void addLast(Object o)
+ObjectGetFirst();
+Object getLast();
+Object removeFirst();
+Object removeLast()
+
+public static void main(String[] args) {
+	LinkedList l=new LinkedList();
+	l.add("zeeshan");
+	l.add(30);
+	l.add(null);
+	l.add("zeeshan");
+	l.addFirst("shifa");
+	System.out.println(l);
+	l.addLast("sadaf");
+	System.out.println(l);
+	System.out.println(l.getFirst());
+	System.out.println(l.getLast());
+    l.removeFirst();
+    System.out.println(l);
+    System.out.println(l.removeLast());
+    }
+
+    [shifa, zeeshan, 30, null, zeeshan]
+[shifa, zeeshan, 30, null, zeeshan, sadaf]
+shifa
+sadaf
+[zeeshan, 30, null, zeeshan, sadaf]
+sadaf
+
+Vector (legacy class)
+--------------------
+
+the underlying data structure is resizeable array
+
+duplicates are allowed
+
+insertion order is preserved
+
+heterogenous elements are allowed
+
+null insertion is posssible
+
+implements Serializable,Cloneable and RandomAcces
+
+every method present inside Vector is synchronized
+
+Methods
+--------------
+
+addElement(Object o)
+
+removeElement(Object o)
+removeElementAt(int index)
+removeAllElements(); ---> Vector
+clear();  ---> Collection
+
+Object elementAt(int index)
+Object firstElement();
+Object lastElement();
+
+int size(); // no of elements added
+int capacity(); // total capacity
+
+
+constructor
+------------------------
+
+Vector v =new Vector();
+
+default initial capacity =10;
+new capacity = initial capacity * 2;
+
+Vector v =new Vector(int initial capacity)
+
+Vector v=new Vector(int initial capacity, int incremental capacity);
+
+	Vector v =new Vector(Collection c);
+
+	public static void main(String[] args) {
+	Vector v =new Vector();
+	System.out.println(v.capacity());
+	for(int i=1;i<=10;i++)
+	{
+		v.addElement(i);
+	}
+	System.out.println(v.capacity());
+	v.addElement("z");
+	System.out.println(v.capacity());
+	System.out.println(v);
+	System.out.println(v.removeElement("z"));
+	System.out.println(v);
+	System.out.println(v.firstElement());
+	Vector v1=new Vector(5,3);
+	for(int i=11;i<=18;i++)
+	{
+		v1.addElement(i);
+	}
+	System.out.println(v1.capacity());
+    }
+	}
+
+10
+10
+20
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, z]
+true
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+1
+8
+
+Stack
+-----------
+
+it is the child class of vector
+
+whenever last in first out(LIFO) order is required then we should gpo for stack
+
+Methods
+---------------
+
+Object push(Object o) ---> to insert an object
+
+Object pop()  ---> to remove and return the top of the stack
+
+Object peek() ---> to return the top of the stack without remove
+
+boolean empty()  ---> returns true if stack is empty
+
+int search(Object o) ---> it returns the offset if the element is availaible otherwise returns -1
+
+public static void main(String[] args) {
+	
+	
+		Stack s =new Stack();
+		s.push("a");
+		s.push("b");
+		s.push("c");
+		s.push("d");
+		System.out.println(s);
+		System.out.println(s.peek());
+		System.out.println(s);
+		System.out.println(s.pop());
+		System.out.println(s);
+		System.out.println(s.search("b"));
+		System.out.println(s.search("z"));
+		s.pop();
+		s.pop();
+		s.pop();
+		System.out.println(s);
+		System.out.println(s.search("a"));
+		}
+
+[a, b, c, d]
+d
+[a, b, c, d]
+d
+[a, b, c]
+2
+-1
+[]
+-1
+
+Set
+------------
+
+it is the child interface of Collection
+
+if we want to represent a group of individual objects as a single entity where duplicates are not allowed and insertion order is
+not preserved then we should go for Set
+
+Set interface doesn t contain any new method we have to use Collection interface methods only
+
+HashSet
+--------------
+
+the underlying data structure is Hastable
+
+insertion order is not preserved and it is based on the hashcode of the objects
+
+duplicates are not allowed, if we try to insert duplicate elements we will not get any compile time error or runtime error it simply
+returns false
+
+HashSet h=new HashSet();
+h.add("a");
+System.out.println(h.add("a")); ---> false
+
+
+Heterogenous elements are allowed
+
+null insertion is possible(but only once)
+
+implements Serializable and Cloneable but not Random Access interface
+
+public static void main(String[] args) {
+	
+	HashSet h=new HashSet();
+	h.add("a");
+	h.add("n");
+	h.add("s");
+	h.add("b");
+	h.add("A");
+	h.add(null);
+	System.out.println(h);
+	System.out.println(h.add("a"));
+	System.out.println(h.add("z"));
+	System.out.println(h);
+		}
+	}
+[null, a, A, b, s, n]
+false
+true
+[null, a, A, b, s, z, n]
+
+LinkedHashSet
+--------------------------
+it is the child class of HashSet
+
+it is exactly same as Hasext except in this insertion order is preserved
+
+
+public static void main(String[] args) {
+	
+	LinkedHashSet h=new LinkedHashSet();
+	h.add("a");
+	h.add("n");
+	h.add("s");
+	h.add("b");
+	h.add("A");
+	h.add(null);
+	System.out.println(h);
+	System.out.println(h.add("a"));
+	System.out.println(h.add("z"));
+	System.out.println(h);
+		}
+	}
+
+[a, n, s, b, A, null]
+false
+true
+[a, n, s, b, A, null, z]
+
+
+TreeSet
+--------------------
+
+the underlying data structure is balanced Tree
+
+duplicates  are not allowed
+
+insertion order is not preserved  and it is based on some sorting order
+
+it can be in default natural sorting order (ascending order) or customized sorting order(descending order)
+
+Heterogenous elements are not allowed and if we try to insert heterogenous elements we will get ClassCastException
+
+Null insertion is possible(only once)
+
+Constructors
+--------------------
+
+TreeSet t=new TreeSet()  ---> default natural sorting order
+
+TreeSet t=new TreeSet(Comparator c)  ---> customized sorting order
+
+public static void main(String[] args) {
+	
+	TreeSet t=new TreeSet();
+	t.add("a");
+	t.add("s");
+	t.add("d");
+	t.add("z");
+	t.add("A");
+	System.out.println(t);[A ,a,d,s,z]
+	t.add(10);
+	System.out.println(t); --->ClassCastException
+	t.add(null);
+	System.out.println(t); --->NullPoinetrException
+		}
+	}
+
+Null Acceptance
+--------------------
+
+every element inserted  in TreeSet are compared with each other
+
+any object compared with null will always give us NullPointerException
+
+
+t.add(10);
+t.add(null) ---> NullPointerException
+
+if we insert null in non empty TreeSet object then we will getNullPoinetrException
+
+t.add(null);
+t.add("a"); --->NullPoiinterException
+
+if we add null as the first element it iis acceptable but as soon as second element is added we will get NullPointerEzxception
+
+
+public static void main(String[] args) {
+	
+	TreeSet t=new TreeSet();
+	t.add("5");
+	t.add("10");
+	t.add("15");
+	t.add("30");
+	t.add("20");
+	System.out.println(t);
+	
+		}
+	}
+
+10 15 20 30 5
+
+if we are depending on default natural sorting order then the elements must be homogenous and comparable
+
+an object is said to be comparable iff the corresponding impements Comparable interface
+e.g --->String class
+
+Comparable interface
+----------------------------
+
+it is present in java.lang package
+
+it contains only one methof i.e compareTo() method
+
+publiic int compareTo(Object obj);
+
+obj1.compareTo(obj2)
+
+---> returns -ve number if obj1 come before obj2
+
+---> return +ve number if obj1 comes after obj2
+
+---> return s 0 if obj1 is same as obj2
+
+if we are depending on default natural sorting order then internally JVM will use compareTo() to arrange object in sorting order
+
+Comparator interface
+------------------------------
+
+it is present in java.util package
+
+it conatains 2 methods equals() and compare()
+
+public int compare(Object obj1, Object obj2)
+
+---> returns -ve number if obj1 come before obj2
+
+---> return +ve number if obj1 comes after obj2
+
+---> return s 0 if obj1 is same as obj2
+
+
+
+public static void main(String[] args) {
+	
+	TreeSet t=new TreeSet(new MyComparator());
+	t.add("f");
+	t.add("a");
+	t.add("d");
+	t.add("s");
+	t.add("z");
+	System.out.println(t);
+	
+		}
+	}
+
+class MyComparator implements Comparator
+{
+	public int compare(Object obj1,Object obj2)
+	{
+String s1=obj1.toString();
+String s2=obj2.toString();
+return -(s1.compareTo(s2));
+	}
+}
+
+z s f d a
+
+-----------------------------------------------------------------------------------------------------------------------
+
+public static void main(String[] args) {
+	
+	TreeSet t=new TreeSet(new MyComparator());
+	t.add(10);
+	t.add(15);
+	t.add(2);
+	t.add(5);
+	t.add(30);
+	System.out.println(t);
+	
+		}
+
+Class MyComparator mplements Comparator
+{
+public iint compare(Object obj1, Object obj2)
+{
+Integer I1=(Integer)obj1;
+Integer I2=(Integer)obj2;
+return -I1.compareTo(I2);
+}
+}
+
+whenever we are defining our won customized sorting y using Comparator then the objects need not be homogenous and Comparable
+
+
+WAP to insert String and StringBuffer objects into TreeSet where sorting order is in increasing length,if 2 objects have same length
+then sort acc to alphabetical order....
+
+
+public class Test {
+
+	
+	
+public static void main(String[] args) {
+	
+
+	TreeSet t=new TreeSet(new MyComparator());
+	t.add(new StringBuffer("abc"));
+	t.add(new StringBuffer("aa"));
+    t.add("xx");
+    t.add("abcd");
+    t.add("A");
+	System.out.println(t);
+	
+		}
+}
+class MyComparator implements Comparator
+{
+public int compare(Object obj1, Object obj2)
+{
+String s1=obj1.toString();
+String s2=obj2.toString();
+int l1=s1.length();
+int l2=s2.length();
+if(l1 < l2)
+	return -1;
+else if(l1 > l2)
+	return 1;
+else
+	return s1.compareTo(s2);
+}
+}
+
+Map
+---------
+
+if we want to represent a group of objects as "key value" pair  the we should go for Map
+
+both key and value are Objects types
+
+keys cant be duplicated but values can be duplicated
+
+each key value pair is known as entry
+
+Map is a group of entries
+
+Mpa is not the child interface of Collection and hence we cant apply Collection interface methods
+
+Map inetrface methods
+-----------------------------
+
+Object put(Object key, Object value)  --> to insert elements in the form of key value pair
+
+void putAll(Map m)
+
+Object remove(Object key) --> it removes the corresponding entry fro the TreeMap and returns corresponding value
+
+boolean containsKey(Object key) --> it will check whether that particular key is present or not
+
+boolean containsValue(Object value)
+
+boolean isEmpty()
+
+int size()
+
+void clear()
+
+Set keySet() ---> we will retrieve only the set of keys
+
+Collection values()
+
+HashMap
+-----------------
+
+
+the underlying data structure is Hashtable
+
+duplicate keys are not allowed but values can be duplicated
+
+insertion orde is not preserved and it is based on the hashcode of keys
+
+heterogenous elements are allowed
+
+null is allowed only for once for key and for values any no of times
+
+it is best suitable for searching operation
+
+public static void main(String[] args) {
+	HashMap h=new HashMap();
+	h.put("aaa", 100);
+	h.put("yyy", 700);
+	h.put("zzz", 800);
+	h.put("ccc", 200);
+	h.put("bbb", 500);
+	System.out.println(h);
+	System.out.println(h.put("aaa", 999));
+	System.out.println(h);
+	System.out.println(h.remove("aaa"));
+	System.out.println(h);	
+	System.out.println(h.containsKey("ccc"));
+	System.out.println(h.containsValue("zeeshan"));
+	Set s =h.keySet();
+	System.out.println(s);
+	Collection c=h.values();
+	System.out.println(c);
+
+	
+}
+}
+
+{aaa=100, ccc=200, bbb=500, yyy=700, zzz=800}
+100
+{aaa=999, ccc=200, bbb=500, yyy=700, zzz=800}
+999
+{ccc=200, bbb=500, yyy=700, zzz=800}
+true
+false
+[ccc, bbb, yyy, zzz]
+[200, 500, 700, 800]
+
+
+LinkedHaashMap
+-------------------------
+
+public static void main(String[] args) {
+	LinkedHashMap h=new LinkedHashMap();
+	h.put("aaa", 100);
+	h.put("yyy", 700);
+	h.put("zzz", 800);
+	h.put("ccc", 200);
+	h.put("bbb", 500);
+	System.out.println(h);
+
+{aaa=100, yyy=700, zzz=800, ccc=200, bbb=500}
+
+TreeMap
+----------------
+
+public static void main(String[] args) {
+	TreeMap h=new TreeMap(new MyComparator());
+	h.put("aaa", 100);
+	h.put("yyy", 700);
+	h.put("zzz", 800);
+	h.put("ccc", 200);
+	h.put("bbb", 500);
+	System.out.println(h);
+
+	
+}
+}
+
+class MyComparator implements Comparator
+{
+	public int compare(Object obj1,Object obj2)
+	{
+		String s1=obj1.toString();
+		String s2=obj2.toString();
+		return -s1.compareTo(s2);
+	}
+}
+
+
+{zzz=800, yyy=700, ccc=200, bbb=500, aaa=100}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
